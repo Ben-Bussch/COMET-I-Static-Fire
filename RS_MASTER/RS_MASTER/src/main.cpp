@@ -72,7 +72,7 @@ void loop() {
 
 
   if(clk_time%50 == 0){
-   pressure = ReadPressureTransducer(1); //1 is Nox 
+   pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
    if(Serial2.available()){
     sendString(String(pressure, 3));
    }
