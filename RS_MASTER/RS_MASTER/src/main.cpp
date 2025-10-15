@@ -92,7 +92,7 @@ void loop() {
    Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
    IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
    if(Serial2.available()){
-    sendString(String(Nox_pressure,3)+String(IPA_pressure,3)+String(clk_time));
+    sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3) + "," + String(clk_time));
    }
   }
 
@@ -150,4 +150,5 @@ if (logFile) {
         
           
               
+
 
