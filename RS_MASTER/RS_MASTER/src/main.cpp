@@ -63,7 +63,6 @@ void setup() {
 
 
     if (!SD.begin(SD_pin)) {
-  Serial.println("SD card initialization failed!");
       Serial.println("SD card initialization failed!");
 } else {
   
