@@ -64,6 +64,7 @@ void setup() {
 
     if (!SD.begin(SD_pin)) {
   Serial.println("SD card initialization failed!");
+      Serial.println("SD card initialization failed!");
 } else {
   
   snprintf(logFileName, sizeof(logFileName), "pressure_%lu.csv", millis());
@@ -84,71 +85,123 @@ void setup() {
     SetupControl(PyroPin, FirePin, FillSequPin);
 }
 
-void loop() {
+// void loop() {
     
-  clk_time = millis();
+//   clk_time = millis();
 
-  if(clk_time%50 == 0){
-   Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
-   IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
-   if(Serial2.available()){
-    sendString(String(clk_time)+","+String(Nox_pressure,3) + ","+String(IPA_pressure,3)  );
-   }
-  }
+//   if(clk_time%50 == 0){
+//    Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
+//    IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
+//    if(Serial2.available()){
+//     sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3) + "," + String(clk_time));
+//    }
+//   }
 
-  logFile = SD.open(logFileName, FILE_WRITE);
-if (logFile) {
-  logFile.print(millis());
-  logFile.print(",");
-  logFile.print(Nox_pressure, 3);
-  logFile.print(",");
-  logFile.println(IPA_pressure, 3);
-  logFile.close();
-} 
+//   logFile = SD.open(logFileName, FILE_WRITE);
+// if (logFile) {
+//   logFile.print(millis());
+//   logFile.print(",");
+//   logFile.print(Nox_pressure, 3);
+//   logFile.print(",");
+//   logFile.println(IPA_pressure, 3);
+//   logFile.close();
+// } 
 
-  /*if(clk_time%500 == 0){
-   Serial.println(pressure);
-  }*/
+//   /*if(clk_time%500 == 0){
+//    Serial.println(pressure);
+//   }*/
 
 
-  if (digitalRead(FillSequPin) == LOW && digitalRead(FirePin) == LOW ){
-    Rest();
-    fillSeq = 0;
-  }
+//   if (digitalRead(FillSequPin) == LOW && digitalRead(FirePin) == LOW ){
+//     Rest();
+//     fillSeq = 0;
+//   }
 
-  if (digitalRead(FillSequPin) == HIGH && digitalRead(FirePin) == LOW){
-      filltime = fillSequence(FillStartTime, clk_time, fillSeq);
-      if(filltime%10000 == 0){
-        sendString(String("Fill Time: ")+ String(filltime/1000, 0)+String(" s"));
-    }
-  }
+//   if (digitalRead(FillSequPin) == HIGH && digitalRead(FirePin) == LOW){
+//       filltime = fillSequence(FillStartTime, clk_time, fillSeq);
+//       if(filltime%10000 == 0){
+//         sendString(String("Fill Time: ")+ String(filltime/1000, 0)+String(" s"));
+//     }
+//   }
 
   
-  if (digitalRead(FirePin) == LOW){
-    //Serial.println("Fire is LOW");
-    digitalWrite(PyroPin, LOW);
-    fireSeq = 0;
-    FireStartTime = clk_time;
-  }
+//   if (digitalRead(FirePin) == LOW){
+//     //Serial.println("Fire is LOW");
+//     digitalWrite(PyroPin, LOW);
+//     fireSeq = 0;
+//     FireStartTime = clk_time;
+//   }
 
-  if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == HIGH){
-    //Serial.println("Fire is HIGH");
+//   if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == HIGH){
+//     //Serial.println("Fire is HIGH");
     
-    fillSeq = 0; //get out of fill sequence
+//     fillSeq = 0; //get out of fill sequence
 
 
-    launchtime = fireSequence(FireStartTime, clk_time, fireSeq, PyroPin);
-    if(launchtime%1000 == 0){
-        sendString(String("Launch Time: ")+ String(launchtime/1000, 0) +String(" s"));
-    }
-  }
+//     launchtime = fireSequence(FireStartTime, clk_time, fireSeq, PyroPin);
+//     if(launchtime%1000 == 0){
+//         sendString(String("Launch Time: ")+ String(launchtime/1000, 0) +String(" s"));
+//     }
+//   }
   
 
-}
+// }
 
    
         
           
-              
+void loop() {
+    clk_time = millis();
+
+    // --- Timed sensor read and transmit ---
+    if (millis() - lastSensorReadTime >= SENSOR_READ_INTERVAL_MS) {
+        lastSensorReadTime = millis();
+
+        Nox_pressure = ReadPressureTransducer(1); // 1 = Nox
+        IPA_pressure = ReadPressureTransducer(2); // 2 = IPA
+
+        // Send sensor data line over RS485 (no condition)
+        sendString(String(Nox_pressure, 3) + "," + String(IPA_pressure, 3) + "," + String(clk_time));
+
+        // Log to SD
+        logFile = SD.open(logFileName, FILE_WRITE);
+        if (logFile) {
+            logFile.print(clk_time);
+            logFile.print(",");
+            logFile.print(Nox_pressure, 3);
+            logFile.print(",");
+            logFile.println(IPA_pressure, 3);
+            logFile.close();
+        }
+    }
+
+    // --- Fire/Fill logic remains the same ---
+    if (digitalRead(FillSequPin) == LOW && digitalRead(FirePin) == LOW) {
+        Rest();
+        fillSeq = 0;
+    }
+
+    if (digitalRead(FillSequPin) == HIGH && digitalRead(FirePin) == LOW) {
+        filltime = fillSequence(FillStartTime, clk_time, fillSeq);
+        if (filltime % 10000 == 0) {
+            sendString(String("Fill Time: ") + String(filltime / 1000, 0) + " s");
+        }
+    }
+
+    if (digitalRead(FirePin) == LOW) {
+        digitalWrite(PyroPin, LOW);
+        fireSeq = 0;
+        FireStartTime = clk_time;
+    }
+
+    if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == HIGH) {
+        fillSeq = 0;
+        launchtime = fireSequence(FireStartTime, clk_time, fireSeq, PyroPin);
+        if (launchtime % 1000 == 0) {
+            sendString(String("Launch Time: ") + String(launchtime / 1000, 0) + " s");
+        }
+    }
+}
+
 
 
