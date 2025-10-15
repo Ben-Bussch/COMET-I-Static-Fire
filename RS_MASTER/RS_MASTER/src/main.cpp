@@ -24,7 +24,8 @@ int filltime = 0;
 int launchtime = 0;
 
 
-float pressure = 0;
+float Nox_pressure = 0;
+float IPA_pressure = 0;
 
 
 
@@ -70,11 +71,11 @@ void loop() {
     
   clk_time = millis();
 
-
   if(clk_time%50 == 0){
-   pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
+   Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
+   IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
    if(Serial2.available()){
-    sendString(String(pressure, 3));
+    sendString(String(Nox_pressure,3)+String(IPA_pressure,3)+String(IPA_pressure,3)+String(clk_time));
    }
   }
   /*if(clk_time%500 == 0){
