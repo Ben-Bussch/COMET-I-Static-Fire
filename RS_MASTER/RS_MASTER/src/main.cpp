@@ -72,7 +72,7 @@ void loop() {
 
 
   if(clk_time%50 == 0){
-   pressure = ReadPressureTransducer();
+   pressure = ReadPressureTransducer(1); //1 is Nox 
    if(Serial2.available()){
     sendString(String(pressure, 3));
    }
@@ -90,7 +90,7 @@ void loop() {
   if (digitalRead(FillSequPin) == HIGH && digitalRead(FirePin) == LOW){
       filltime = fillSequence(FillStartTime, clk_time, fillSeq);
       if(filltime%10000 == 0){
-        sendString(String("Fill Time: ")+ String(filltime/1000, 0));
+        sendString(String("Fill Time: ")+ String(filltime/1000, 0)+String(" s"));
     }
   }
 
@@ -110,18 +110,9 @@ void loop() {
 
     launchtime = fireSequence(FireStartTime, clk_time, fireSeq, PyroPin);
     if(launchtime%1000 == 0){
-        sendString(String("Launch Time: ")+ String(launchtime/1000, 0));
+        sendString(String("Launch Time: ")+ String(launchtime/1000, 0) +String(" s"));
     }
   }
-  
-  unsigned long currentMillis = millis();
-
-    // ---- Update sensor readings (globals only, non-blocking) ----
-    if (currentMillis - lastSensorReadTime >= SENSOR_READ_INTERVAL_MS) {
-        ReadPressureTransducer();  // updates pressure_readingglobal & current_readingglobal
-        lastSensorReadTime = currentMillis;
-    }
-        
   
 
 }
