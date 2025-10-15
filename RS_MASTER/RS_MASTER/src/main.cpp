@@ -9,6 +9,10 @@ const int RS_DE_RE_SLAVE = 10;
 unsigned long lastSensorReadTime = 0;
 const unsigned long SENSOR_READ_INTERVAL_MS = 50;
 
+File logFile;
+char logFileName[32];
+int SD_pin = 4;
+
 // Fire/Fill sequence variables
 int PyroPin = 21;
 int FillSequPin = 36;
@@ -41,12 +45,8 @@ void sendString(const String& data) {
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // back to receive
 }
 
-
-
 int clk_time = 0;
-int FireStartTime = 0;
-int launchtime = 0;
-float pressure = 0;
+
 
 String firingpinstatus = "";
 String fillpinstatus = "";
@@ -61,6 +61,24 @@ void setup() {
     pinMode(RS_DE_RE_SLAVE, OUTPUT);
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // default receive
 
+
+    if (!SD.begin(SD_pin)) {
+  Serial.println("SD card initialization failed!");
+} else {
+  
+  snprintf(logFileName, sizeof(logFileName), "pressure_%lu.csv", millis());
+  
+  logFile = SD.open(logFileName, FILE_WRITE);
+  if (logFile) {
+    logFile.println("Time(ms),Nox_Pressure(psi),IPA_Pressure(psi)");
+    logFile.close();
+    
+  } 
+}
+
+
+    
+
     Serial.println(SetupCurrentSensor());
     Serial.println("RS485 Slave ready.");
     SetupControl(PyroPin, FirePin, FillSequPin);
@@ -74,9 +92,20 @@ void loop() {
    Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
    IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
    if(Serial2.available()){
-    sendString(String(Nox_pressure,3)+String(IPA_pressure,3)+String(IPA_pressure,3)+String(clk_time));
+    sendString(String(Nox_pressure,3)+String(IPA_pressure,3)+String(clk_time));
    }
   }
+
+  logFile = SD.open(logFileName, FILE_WRITE);
+if (logFile) {
+  logFile.print(millis());
+  logFile.print(",");
+  logFile.print(Nox_pressure, 3);
+  logFile.print(",");
+  logFile.println(IPA_pressure, 3);
+  logFile.close();
+} 
+
   /*if(clk_time%500 == 0){
    Serial.println(pressure);
   }*/
