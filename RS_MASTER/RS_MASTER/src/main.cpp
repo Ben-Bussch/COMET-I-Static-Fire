@@ -43,7 +43,7 @@ void sendString(const String& data) {
 
     delayMicroseconds(100);
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // back to receive
-    Serial.println(data);
+    //Serial.println(data);
 }
 
 int clk_time = 0;
@@ -56,12 +56,21 @@ String fillpinstatus = "";
 //--------------- My good'ol rs485 -------------------------
 
 void setup() {
-    Serial.begin(9600);
+    // turn the LED on (HIGH is the voltage level)
+    pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, HIGH);
+
+    //Serial.begin(9600);
     Serial2.begin(9600);
-    delay(5000);
+    //while (!Serial && millis() < 5000) {}
+    //Serial.begin(9600); 
+    //Serial.println("Hello from Teensy 4.1!");
+    while (!Serial2 && millis() < 5000) {}
+
+    //Serial2.flush();
     String PT_setup = SetupCurrentSensor();
     
-    Serial.println(PT_setup);
+    //Serial.println(PT_setup);
 
     pinMode(RS_DE_RE_SLAVE, OUTPUT);
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // default receive
@@ -81,7 +90,7 @@ void setup() {
   } 
   
 }*/
-    Serial.println("RS485 Slave ready.");
+    //Serial.println("RS485 Slave ready.");
     SetupControl(PyroPin, FirePin, FillSequPin);
 }
 
@@ -92,9 +101,8 @@ void loop() {
   if(clk_time%50 == 0){
    Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
    IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
-   if(Serial2.available()){
-    sendString(String(clk_time)+","+String(Nox_pressure,3) + ","+String(IPA_pressure,3)  );
-   }
+   sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3)+","+String(clk_time));
+
   }
 /*
   logFile = SD.open(logFileName, FILE_WRITE);
