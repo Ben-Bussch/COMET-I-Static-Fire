@@ -77,7 +77,7 @@ void setup() {
 }
 
 
-    
+
 
     Serial.println(SetupCurrentSensor());
     Serial.println("RS485 Slave ready.");
