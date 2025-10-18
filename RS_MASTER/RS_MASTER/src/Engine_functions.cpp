@@ -26,6 +26,7 @@ int count = 0;
 
 void SetupControl(int PyroPin, int FirePin, int FillSequPin){
       //Servos
+  
   NoxEngServo.attach(NoxEngPin);
   NoxEngServo.writeMicroseconds(NoxEngStartPPM); 
 
@@ -34,11 +35,11 @@ void SetupControl(int PyroPin, int FirePin, int FillSequPin){
 
   FillServo.attach(FillPin);
   FillServo.writeMicroseconds(FillStartPPM); 
-
-  //Inputs and Outputs
+     
   pinMode(PyroPin, OUTPUT);
   pinMode(FirePin, INPUT);
   pinMode(FillSequPin,  INPUT);
+
 }
 
 void Rest(){
