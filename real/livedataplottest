@@ -1,3 +1,7 @@
+import matplotlib
+matplotlib.use("TkAgg")
+
+import matplotlib.pyplot as plt
 import serial
 import threading
 import time
@@ -43,13 +47,11 @@ def poll_slave():
         if polling_enabled:
             try:
                 ser.write(b"PRESS?\n")
-                time.sleep(5e-6)
                 response = ser.readline().decode(errors='ignore').strip()
                 if not response:
                     response = "<no data>"
                 log_to_csv(response)
-                if response != "<no data>":
-                    print(f"[Auto] {response}")  # Print to terminal
+                print(f"[Auto] {response}")  # Print to terminal
             except Exception as e:
                 print(f"Polling error: {e}")
         time.sleep(0.05)  
@@ -79,6 +81,24 @@ def user_input():
 
 # --- Main ---
 def main():
+
+    plt.ion()
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
+    ax1.set_title("Pressure vs Runtime")
+    ax1.set_xlabel("Runtime (s)")
+    ax1.set_ylabel("Pressure (bar)")
+    ax1.grid(True)
+    ax1.legend()
+
+    ax2.set_title("Current vs Runtime")
+    ax2.set_xlabel("Runtime (s)")
+    ax2.set_ylabel("Current (mA)")
+    ax2.grid(True)
+    ax2.legend()
+
+    plt.tight_layout()
+    plt.draw()
+    
     print("Master started. Polling data. Type a command to override.")
     print(f"Logging all responses to {CSV_PATH}")
 
@@ -87,6 +107,7 @@ def main():
 
     while True:
         time.sleep(1)
+0
 
 if __name__ == "__main__":
     main()
