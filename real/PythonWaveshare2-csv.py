@@ -14,9 +14,16 @@ ser = serial.Serial(PORT, BAUD, timeout=0.1)
 polling_enabled = True  # global flag
 
 
-# FOLDER = r"C:\Users\adiso\OneDrive\Documents\SULRE\SULRE test data"
-FOLDER = r"C:\Users\ethan\Documents\TestOutputs"
-os.makedirs(FOLDER, exist_ok=True)
+#Directory setup:
+try: 
+    print('The home has been saved as directory: ', home_directory)
+except:
+    home_directory = os.path.normpath(os.getcwd() + os.sep + os.pardir)    
+    print('Saving the home directory as: ', home_directory)
+    
+    
+FOLDER = home_directory + "\\Data\\"
+#os.makedirs(FOLDER, exist_ok=True)
 
 timestamp1 = time.strftime("%Y%m%d-%H%M")
 runtype = input("Is this a test run or actual run? ").strip().lower()

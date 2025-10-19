@@ -6,8 +6,8 @@
 #include <SD.h>
 
 const int RS_DE_RE_SLAVE = 10;
-unsigned long lastSensorReadTime = 0;
-const unsigned long SENSOR_READ_INTERVAL_MS = 50;
+int lastSensorReadTime = 0;
+const int SENSOR_READ_INTERVAL_MS = 50;
 
 File logFile;
 char logFileName[32];
@@ -37,14 +37,13 @@ float IPA_pressure = 0;
 // RS485 transmit helper
 void sendString(const String& data) {
     digitalWrite(RS_DE_RE_SLAVE, HIGH);  // switch to transmit
-    delayMicroseconds(100);
+    delayMicroseconds(200);
 
     Serial2.print(data);
     Serial2.print('\n');
     Serial2.flush();
-
-    delayMicroseconds(100);
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // back to receive
+    delayMicroseconds(200);
     //Serial.println(data);
 }
 
@@ -104,7 +103,8 @@ void loop() {
     
   clk_time = millis();
 
-  if(clk_time%50 == 0){
+  if(clk_time - lastSensorReadTime - SENSOR_READ_INTERVAL_MS >= 0){
+   lastSensorReadTime  = clk_time;
    Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
    IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
    sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3)+","+String(clk_time));
@@ -122,16 +122,19 @@ if (logFile) {
 } */
 
 
-
+  
   if (digitalRead(FillSequPin) == LOW && digitalRead(FirePin) == LOW ){
     Rest();
     fillSeq = 0;
+    FillStartTime = clk_time;
   }
 
   if (digitalRead(FillSequPin) == HIGH && digitalRead(FirePin) == LOW){
       filltime = fillSequence(FillStartTime, clk_time, fillSeq);
-      if(filltime%10000 == 0){
-        sendString(String("Fill Time: ")+ String(filltime/1000, 0)+String(" s"));
+      if(filltime%1000 == 0){
+        int ft = filltime/1000;
+        sendString(String("Fill Time: ")+ String(ft)+String(" s"));
+        //delayMicroseconds(500);
     }
   }
 
@@ -151,7 +154,10 @@ if (logFile) {
 
     launchtime = fireSequence(FireStartTime, clk_time, fireSeq, PyroPin);
     if(launchtime%1000 == 0){
-        sendString(String("Launch Time: ")+ String(launchtime/1000, 0) +String(" s"));
+        int lt = launchtime/1000;
+        sendString(String("Launch Time: ")+ String(lt) +String(" s"));
+        //sendString(String(launchtime));
+        //delayMicroseconds(500);
     }
   }
   

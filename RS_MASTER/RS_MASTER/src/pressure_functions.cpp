@@ -14,13 +14,24 @@ float ina219gradient = 5.75;
 String SetupCurrentSensor()
 {
     String status;
-    if (!ina219A.begin() &&!ina219B.begin() ) {
+    
+    if (!ina219A.begin() || !ina219B.begin() ) {
         status = "Failed to find INA219 chip";
     } else {
+        ina219A.setCalibration_32V_1A();
         ina219B.setCalibration_32V_1A();
-        //ina219B.setCalibration_32V_1A();
         status = "Successfully connected to both INA219 chip";
     }
+    
+    /*
+    if (!ina219B.begin()) {
+        status = "Failed to find INA219B chip";
+    } else {
+        ina219B.setCalibration_32V_1A();
+        status = "Successfully connected to INA219B chip";
+    }
+    */
+    
     return status;
 }
 

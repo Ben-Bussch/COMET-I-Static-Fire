@@ -25,8 +25,7 @@ int PPMpos = 0;
 int count = 0;
 
 void SetupControl(int PyroPin, int FirePin, int FillSequPin){
-      //Servos
-  
+  //Servos
   NoxEngServo.attach(NoxEngPin);
   NoxEngServo.writeMicroseconds(NoxEngStartPPM); 
 
@@ -47,10 +46,12 @@ void Rest(){
    IPAEngServo.writeMicroseconds(IPAEngStartPPM); 
    FillServo.writeMicroseconds(FillStartPPM); 
 }
+
 int fillSequence(int FillStartTime, int clk_time, int fillSeq)
 {
   int filltime = - FillStartTime + clk_time;
-  
+  FillServo.writeMicroseconds(FilldeltaPPM+FillStartPPM); 
+  /*
   if(fillSeq == 0){
       NoxEngServo.writeMicroseconds(NoxEngStartPPM);
       IPAEngServo.writeMicroseconds(IPAEngStartPPM);
@@ -63,17 +64,15 @@ int fillSequence(int FillStartTime, int clk_time, int fillSeq)
     while(PPMpos <= (FilldeltaPPM)){
       PPMpos += 3;
       FillServo.writeMicroseconds(PPMpos+FillStartPPM); 
-    }
+      }
     if(PPMpos >= (FilldeltaPPM)){
       fillSeq = 2;  
+      }
+
     }
-
-    return filltime;
-  }
+    */
   
-
-
-
+  return filltime;
 }
 
 
