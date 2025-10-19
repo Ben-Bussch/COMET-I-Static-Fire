@@ -15,14 +15,16 @@ polling_enabled = True  # global flag
 
 
 #Directory setup:
-try: 
-    print('The home has been saved as directory: ', home_directory)
-except:
-    home_directory = os.path.normpath(os.getcwd() + os.sep + os.pardir)    
-    print('Saving the home directory as: ', home_directory)
+# try: 
+#     print('The home has been saved as directory: ', home_directory)
+# except:
+#     home_directory = os.path.normpath(os.getcwd())    
+#     print('Saving the home directory as: ', home_directory)
     
+FOLDER = r"C:\Users\ethan\Documents\TestOutputs"
+os.makedirs(FOLDER, exist_ok=True)
     
-FOLDER = home_directory + "\\Data\\"
+# FOLDER = home_directory + "\\Data"
 #os.makedirs(FOLDER, exist_ok=True)
 
 timestamp1 = time.strftime("%Y%m%d-%H%M")
@@ -49,8 +51,8 @@ def poll_slave():
     while True:
         if polling_enabled:
             try:
-                ser.write(b"PRESS?\n")
-                time.sleep(5e-6)
+                # ser.write(b"PRESS?\n")
+                # time.sleep(5e-6)
                 response = ser.readline().decode(errors='ignore').strip()
                 if not response:
                     response = "<no data>"
@@ -90,7 +92,7 @@ def main():
     print(f"Logging all responses to {CSV_PATH}")
 
     threading.Thread(target=poll_slave, daemon=True).start()
-    threading.Thread(target=user_input, daemon=True).start()
+    # threading.Thread(target=user_input, daemon=True).start()
 
     while True:
         time.sleep(1)
