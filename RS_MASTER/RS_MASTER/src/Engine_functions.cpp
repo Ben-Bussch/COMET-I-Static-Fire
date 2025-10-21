@@ -12,7 +12,7 @@ int IPAEngPin = 9;
 int FillPin = 11;
 
 
-int NoxEngStartPPM = 1050;
+int NoxEngStartPPM = 980;
 int IPAEngStartPPM = 1400;
 int FillStartPPM = 1050;
 
@@ -47,9 +47,9 @@ void Rest(){
    FillServo.writeMicroseconds(FillStartPPM); 
 }
 
-int fillSequence(int FillStartTime, int clk_time, int fillSeq)
+unsigned long fillSequence(unsigned long FillStartTime, unsigned long clk_time, int fillSeq)
 {
-  int filltime = - FillStartTime + clk_time;
+  unsigned long filltime = - FillStartTime + clk_time;
   FillServo.writeMicroseconds(FilldeltaPPM+FillStartPPM); 
   /*
   if(fillSeq == 0){
@@ -76,9 +76,9 @@ int fillSequence(int FillStartTime, int clk_time, int fillSeq)
 }
 
 
-int fireSequence(int FireStartTime, int clk_time, int FireSeq, int PyroPin)
+unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, int FireSeq, int PyroPin)
 {
-  int countdown = - 10000 - FireStartTime + clk_time;
+  unsigned long countdown =  clk_time - FireStartTime ;
 
   if(FireSeq == 0){
       FillServo.writeMicroseconds(FillStartPPM);
@@ -86,16 +86,16 @@ int fireSequence(int FireStartTime, int clk_time, int FireSeq, int PyroPin)
   }
 
 
-  if(clk_time -  FireStartTime  >= 10000 && FireSeq == 1){
+  if(countdown  >= 5000 && FireSeq == 1){
     digitalWrite(PyroPin, HIGH);
     FireSeq = 2; 
   }
 
-  if(clk_time -  FireStartTime  >= 10100 && FireSeq == 2){
+  if(countdown  >= 10000 && FireSeq == 2){
     NoxEngServo.writeMicroseconds(NoxEngStartPPM+NoxdeltaPPM); 
     FireSeq = 3; 
   }
- if(clk_time -  FireStartTime  >= 10200 && FireSeq == 3){
+ if(countdown >= 10200 && FireSeq == 3){
     IPAEngServo.writeMicroseconds(IPAEngStartPPM+IPAdeltaPPM);
     FireSeq = 4; 
   }
@@ -103,3 +103,17 @@ int fireSequence(int FireStartTime, int clk_time, int FireSeq, int PyroPin)
   return countdown;
 }
 
+
+unsigned long abortsequence(unsigned long AbortStartTime, unsigned long clk_time, int PyroPin){
+  unsigned long countdown =  clk_time - AbortStartTime;
+  if(clk_time -  AbortStartTime  >= 100){
+  digitalWrite(PyroPin, LOW);
+  }
+
+  if(countdown  >= 3000){
+    NoxEngServo.writeMicroseconds(NoxEngStartPPM+NoxdeltaPPM); 
+  }
+  
+  return countdown;
+
+}
