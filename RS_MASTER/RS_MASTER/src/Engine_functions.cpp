@@ -49,44 +49,26 @@ void Rest(){
 
 unsigned long fillSequence(unsigned long FillStartTime, unsigned long clk_time, int fillSeq)
 {
-  unsigned long filltime = - FillStartTime + clk_time;
-  FillServo.writeMicroseconds(FilldeltaPPM+FillStartPPM); 
-  /*
-  if(fillSeq == 0){
-      NoxEngServo.writeMicroseconds(NoxEngStartPPM);
-      IPAEngServo.writeMicroseconds(IPAEngStartPPM);
-      FillServo.writeMicroseconds(FillStartPPM);
-      PPMpos = 0;
-      fillSeq = 1;
+  unsigned long filltime = clk_time - FillStartTime;
+  if(filltime >= 100){
+    FillServo.writeMicroseconds(FilldeltaPPM+FillStartPPM); 
   }
-  if(fillSeq == 1 && filltime%5 == 0){
-    // waits 5ms for the servo to reach the position
-    while(PPMpos <= (FilldeltaPPM)){
-      PPMpos += 3;
-      FillServo.writeMicroseconds(PPMpos+FillStartPPM); 
-      }
-    if(PPMpos >= (FilldeltaPPM)){
-      fillSeq = 2;  
-      }
-
-    }
-    */
-  
+    
   return filltime;
 }
 
 
 unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, int FireSeq, int PyroPin)
 {
-  unsigned long countdown =  clk_time - FireStartTime ;
+  unsigned long countdown =  clk_time - FireStartTime; //starts from zero to avoid negative long issues
 
-  if(FireSeq == 0){
+  if(FireSeq == 0 && countdown >= 100 ){
       FillServo.writeMicroseconds(FillStartPPM);
       FireSeq = 1;
   }
 
 
-  if(countdown  >= 5000 && FireSeq == 1){
+  if(countdown  >= 6000 && FireSeq == 1){
     digitalWrite(PyroPin, HIGH);
     FireSeq = 2; 
   }
@@ -105,8 +87,8 @@ unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, 
 
 
 unsigned long abortsequence(unsigned long AbortStartTime, unsigned long clk_time, int PyroPin){
-  unsigned long countdown =  clk_time - AbortStartTime;
-  if(clk_time -  AbortStartTime  >= 100){
+  unsigned long countdown =  clk_time - AbortStartTime; //starts from zero to avoid negative long issues
+  if(countdown  >= 100){
   digitalWrite(PyroPin, LOW);
   }
 

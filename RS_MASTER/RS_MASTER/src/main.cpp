@@ -14,7 +14,7 @@ int DISPLAY_INTERVAL_MS  = 1000;
 
 File logFile;
 char logFileName[32];
-int SD_pin = 4;
+
 
 
 
@@ -53,26 +53,16 @@ void sendString(const String& data) {
     Serial2.flush();
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // back to receive
     delayMicroseconds(20);
-    //Serial.println(data);
 }
 
-
-//String firingpinstatus = "";
-//String fillpinstatus = "";
-
-//testing :)
-//--------------- My good'ol rs485 -------------------------
 
 void setup() {
     // turn the LED on (HIGH is the voltage level)
     pinMode(LED_BUILTIN, OUTPUT);
     digitalWrite(LED_BUILTIN, HIGH);
 
-    //Serial.begin(9600);
     Serial2.begin(9600);
-    //while (!Serial && millis() < 5000) {}
-    //Serial.begin(9600); 
-    //Serial.println("Hello from Teensy 4.1!");
+
     while (!Serial2 && millis() < 5000) {}
 
     pinMode(RS_DE_RE_SLAVE, OUTPUT);
@@ -82,31 +72,12 @@ void setup() {
     //Serial2.flush();
     String PT_setup = SetupCurrentSensor();
     sendString(PT_setup);
-    //Serial.println(PT_setup);
 
     //Inputs and Outputs
     SetupControl(PyroPin, FirePin, FillSequPin);
     
-
-
-/* 
-    if (!SD.begin(SD_pin)) {
-  Serial.println("SD card initialization failed!");
-} else {
-  
-  snprintf(logFileName, sizeof(logFileName), "pressure_%lu.csv", millis());
-  
-  logFile = SD.open(logFileName, FILE_WRITE);
-  if (logFile) {
-    logFile.println("Time(ms),Nox_Pressure(psi),IPA_Pressure(psi)");
-    logFile.close();
-    
-  } 
-  
-}*/
-    //Serial.println("RS485 Slave ready.");
-
 }
+
 
 void loop() {
     
@@ -119,17 +90,6 @@ void loop() {
    //sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3)+","+String(clk_time));
 
   }
-
-/*
-  logFile = SD.open(logFileName, FILE_WRITE);
-if (logFile) {
-  logFile.print(millis());
-  logFile.print(",");
-  logFile.print(Nox_pressure, 3);
-  logFile.print(",");
-  logFile.println(IPA_pressure, 3);
-  logFile.close();
-} */
 
 
   //Rest mode, both fire and fill are low
@@ -162,7 +122,6 @@ if (logFile) {
         int ft = filltime/1000;
 
         sendString(String("Mode: FILL"));
-
         sendString(String("Fill Time: ")+ String(ft)+String(" s"));
 
     }
@@ -172,7 +131,6 @@ if (logFile) {
 
   // Pyro safety when fire is low
   if (digitalRead(FirePin) == LOW){
-    //Serial.println("Fire is LOW");
     digitalWrite(PyroPin, LOW);
     fireSeq = 0;
     FireStartTime = clk_time;
@@ -181,9 +139,7 @@ if (logFile) {
 
   
   // Launch mode when fire is high and fill is high
-  if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == HIGH){
-    //Serial.println("Fire is HIGH");
-    
+  if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == HIGH){   
     fillSeq = 0; //get out of fill sequence
 
 
@@ -195,11 +151,9 @@ if (logFile) {
     if(int (launchtime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0 ){
         lastdisplay = launchtime; 
         int lt = launchtime/1000 -10;
-        sendString(String("Launch Time: ")+ String(lt) +String(" s"));
-
         sendString(String("Mode: FIRE"));
-        //sendString(String(launchtime));
-        //delayMicroseconds(500);
+        sendString(String("Launch Time: ")+ String(lt) +String(" s"));
+        
     }
   }
 
@@ -209,6 +163,7 @@ if (logFile) {
     fireSeq = 0;
  
     aborttime  = abortsequence(AbortStartTime, clk_time, PyroPin);
+
     if(lastdisplay > aborttime ){
       lastdisplay = aborttime;
     }
