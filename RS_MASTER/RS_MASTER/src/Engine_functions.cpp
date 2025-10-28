@@ -77,7 +77,7 @@ unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, 
     NoxEngServo.writeMicroseconds(NoxEngStartPPM+NoxdeltaPPM); 
     FireSeq = 3; 
   }
- if(countdown >= 10200 && FireSeq == 3){
+ if(countdown >= 10100 && FireSeq == 3){
     IPAEngServo.writeMicroseconds(IPAEngStartPPM+IPAdeltaPPM);
     FireSeq = 4; 
   }
@@ -92,7 +92,11 @@ unsigned long abortsequence(unsigned long AbortStartTime, unsigned long clk_time
   digitalWrite(PyroPin, LOW);
   }
 
-  if(countdown  >= 3000){
+  if(countdown  >= 3000){ 
+    FillServo.writeMicroseconds(FillStartPPM);
+  }
+
+  if(countdown  >= 3300){
     NoxEngServo.writeMicroseconds(NoxEngStartPPM+NoxdeltaPPM); 
   }
   

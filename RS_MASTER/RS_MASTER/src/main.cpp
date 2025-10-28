@@ -155,6 +155,8 @@ void loop() {
         sendString(String("Launch Time: ")+ String(lt) +String(" s"));
         
     }
+    AbortStartTime = clk_time;
+    FillStartTime = clk_time;
   }
 
   // Abort mode when fire is high and fill is lows
@@ -178,6 +180,9 @@ void loop() {
 
        }
     }
+
+    FireStartTime = clk_time;
+    FillStartTime = clk_time;
 
   }
 }     
