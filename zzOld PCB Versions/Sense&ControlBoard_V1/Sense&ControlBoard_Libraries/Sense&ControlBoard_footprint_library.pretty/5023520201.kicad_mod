@@ -1,0 +1,364 @@
+(footprint "5023520201"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "502352-0201-1")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 0 0.525 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e35682bc-e4e6-4582-879d-36aba2b252c6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "Molex_01x02"
+		(at 0 0.525 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "dcbfa692-0486-46a2-bbd1-8751bfb9998b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.molex.com/pdm_docs/sd/5023520201_sd.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "87868f1e-f489-42a5-8240-92ba61880290")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM ROHS COMPLIANT: YES"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6f717c4e-dc85-4878-b85d-c057c0173bc1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "6.4"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c4cb930c-ece9-4ab1-abfd-23074d9d4495")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Molex"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a677d6bb-3b30-420d-93d7-64416017fc83")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "502352-0201"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d7051613-c2e3-4180-a160-012af930787f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "538-502352-0201"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b1ce5c20-334a-4020-9b79-d484202d0ab7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Molex/502352-0201?qs=c8NFF48pVsBOILwHiEHKCw%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "32417c13-72b1-4db7-abd5-14b74f6661cc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f33ed85c-3edc-4588-aac3-16367fa27bb0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cfab4885-7a73-4e37-bab8-195fa345cf05")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "502352-0201"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c95d3d08-d9a6-4471-9cb0-24b3e8b1c9dd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7235ccbe-4b4f-44d6-b00e-6f372d8f38ba")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" "Farnell"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8130ee1c-5b27-405c-a17d-7854a4d216a0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -4 -4)
+		(end -2.5 -4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ee171d32-a591-44f4-a746-d9f9bd5b7d60")
+	)
+	(fp_line
+		(start -4 -0.5)
+		(end -4 -4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c49cacaf-a9c9-485e-a67c-11d9af65b28f")
+	)
+	(fp_line
+		(start -2 5.2)
+		(end 2 5.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "32d702e9-d3fd-4756-961e-33fee942bf85")
+	)
+	(fp_line
+		(start 4 -4)
+		(end 2.5 -4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0916b583-bb72-45f3-a7f3-6eac63050bd7")
+	)
+	(fp_line
+		(start 4 -0.5)
+		(end 4 -4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0f899a7a-5f18-4974-b38d-a358a87eae0f")
+	)
+	(fp_line
+		(start -5.4 -5.34)
+		(end 5.4 -5.34)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d5cfe482-4626-4633-807c-1a9b2df3b697")
+	)
+	(fp_line
+		(start -5.4 6.39)
+		(end -5.4 -5.34)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ca3256f8-20b0-4d3d-9b9f-563d85f735d8")
+	)
+	(fp_line
+		(start 5.4 -5.34)
+		(end 5.4 6.39)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "343ad12b-1f56-4e17-afa5-3f390292d88a")
+	)
+	(fp_line
+		(start 5.4 6.39)
+		(end -5.4 6.39)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "75eebc0a-9d8b-449a-91d4-2f800eb13b87")
+	)
+	(fp_line
+		(start -4 -4)
+		(end 4 -4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "059903e8-06a2-499e-8a3e-7502b2cffeb3")
+	)
+	(fp_line
+		(start -4 5.2)
+		(end -4 -4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b097dbde-666f-4806-a5fe-c2140c708928")
+	)
+	(fp_line
+		(start 4 -4)
+		(end 4 5.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "176a613e-c104-42d0-b681-84b15da8dea9")
+	)
+	(fp_line
+		(start 4 5.2)
+		(end -4 5.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fb0bfd86-608d-4340-8af3-5b793ad9586d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.525 0)
+		(layer "F.Fab")
+		(uuid "cc5052f0-ab82-4e0d-86fc-217dbcea29c3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1 -2.74)
+		(size 1.2 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "42b50d2a-5d55-419a-9837-978fc5773f6d")
+	)
+	(pad "2" smd rect
+		(at 1 -2.74)
+		(size 1.2 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "15427eac-78d3-4caf-abfb-a3a9ffa0870c")
+	)
+	(pad "MP1" smd rect
+		(at -3.55 2.74)
+		(size 1.7 5.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3c7e53bd-4ec7-4251-aa94-97c3b9419aea")
+	)
+	(pad "MP2" smd rect
+		(at 3.55 2.74)
+		(size 1.7 5.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6c406a20-2435-444d-9da6-725d65ea61ff")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Sense&ControlBoard_Libraries/packages3D/502352-0201.stp"
+		(offset
+			(xyz 0 -0.319999988 3.140000058)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -180)
+		)
+	)
+)

@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "Sense&ControlBoard_symbol_library")(type "KiCad")(uri "${KIPRJMOD}/Sense&ControlBoard_Libraries/Sense&ControlBoard_symbol_library.kicad_sym")(options "")(descr ""))
-)

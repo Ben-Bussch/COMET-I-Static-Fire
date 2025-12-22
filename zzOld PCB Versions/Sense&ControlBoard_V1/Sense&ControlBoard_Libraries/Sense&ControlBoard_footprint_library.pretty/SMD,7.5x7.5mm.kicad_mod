@@ -1,0 +1,200 @@
+(footprint "SMD,7.5x7.5mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -9.75 -8 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a6a0a70b-fa15-4ae8-bce3-b65aef1560d0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Buzzer"
+		(at 3.175 -0.025 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "758ee080-b2ab-4f13-9a48-cf52b3e8c828")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -9.75 -7.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d2a3a3f7-ef4d-4f32-94ce-d4812c9facdd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at -9.75 -7.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f5b9166b-11f2-4b32-9a9e-d1a537b86318")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "AD-7504-MA1-LF "
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "51c339a7-3a46-4b7c-83a7-6984e624258f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Link" "https://www.mouser.co.uk/ProductDetail/AATC/AD-7504-MA1-LF?qs=uwxL4vQweFMd4K%2FdLMgROg%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ff7baef4-a008-4ca2-a499-05793593d646")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" "Mouser"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "daed8096-dfe8-46fd-b686-10226f3951c1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0 6)
+		(end 0 1.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "3ede484a-818d-493f-9d7c-f3649801bcd9")
+	)
+	(fp_line
+		(start 1.5 0)
+		(end 6 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0c2cc542-f0f0-48cf-b3f9-47b0f9fd358e")
+	)
+	(fp_line
+		(start 1.5 7.5)
+		(end 6 7.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f6a499b2-9b3d-4aa4-a332-e44eaa5a737f")
+	)
+	(fp_line
+		(start 7.5 6)
+		(end 7.5 1.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "c1ae5617-3404-47fd-99ed-255026aa12db")
+	)
+	(fp_circle
+		(center -0.5 -0.5)
+		(end -0.25 -0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "0e9b431e-0f22-4505-8047-eaee34b91c9c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1.175 -0.025 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "4265bf37-505e-4e97-9643-37545ee25e61")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 0.6 0.6 180)
+		(size 1.3 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "753318d7-9992-4339-a90f-3ac416e9c6b0")
+	)
+	(pad "2" smd roundrect
+		(at 0.6 6.9 180)
+		(size 1.3 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "ad993a8b-5f9f-4813-9958-8b92ade063ed")
+	)
+	(pad "3" smd roundrect
+		(at 6.9 0.6 180)
+		(size 1.3 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "f3fdee6f-063e-4301-babb-d837ece23e9c")
+	)
+	(pad "3" smd roundrect
+		(at 6.9 6.9 180)
+		(size 1.3 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "02d0323f-5b33-40b3-bcc8-5b00656627ee")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Sense&ControlBoard_Libraries/packages3D/MagneticBuzzer_Kobitone_254-EMB84Q-RO.step"
+		(offset
+			(xyz 3.75 -3.75 0)
+		)
+		(scale
+			(xyz 0.85 0.85 0.85)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

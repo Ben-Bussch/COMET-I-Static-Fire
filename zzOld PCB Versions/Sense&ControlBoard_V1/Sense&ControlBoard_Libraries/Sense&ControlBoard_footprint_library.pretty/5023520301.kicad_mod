@@ -1,0 +1,412 @@
+(footprint "5023520301"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "502352-0301-2")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9305fdb3-e451-42d6-9c6d-15cbf1749d4d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "Molex_01x03"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "7e8fbba3-33b3-42fb-8635-6a4815941d00")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.molex.com/pdm_docs/sd/5023520601_sd.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "38edb2a6-2193-460f-abdc-bb745f4bf4a9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "DuraClik Wire-to-Board Header, Single Row, Right-Angle,  Circuits, Tin (Sn) Plating, Black"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "609660d6-2310-433d-b98b-52e5deee8ddc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "6.4"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5f1d6c06-85e8-47c8-9217-4442f41bea1e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Molex"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "949a60b9-86cf-4ab5-9eeb-791589fed485")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "502352-0301"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d77be256-eb11-4f3b-a4d2-4f3a2c950eb0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "538-502352-0301"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "11871e9f-bb5c-4e8a-89e8-c1de5d2ba455")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Molex/502352-0301?qs=c8NFF48pVsDo94EtT7jeBA%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "64e9a81d-c26d-4042-9a42-3f84d84a259d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "99bd8b7d-ecf5-411b-8baa-1e567b520329")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dec5688b-379f-4cfb-a657-e8e8f4c9fe79")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "502352-0301"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3e948363-4574-48cf-9fd5-2f9a9dc446ab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Link" "https://uk.farnell.com/molex/502352-0301/wtb-conn-header-r-a-3pos-1row/dp/3365016"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fed17c18-3048-4040-b19d-e9b1b87f2b45")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" "Farnell"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "581b1e87-645d-4a1b-af1d-658b84e58e94")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5 -4.2)
+		(end -5 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9db87516-35bb-4eec-8542-7207168cae75")
+	)
+	(fp_line
+		(start -3.5 -4.2)
+		(end -5 -4.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "29857619-ffb6-403c-b32d-6a1a037bee4f")
+	)
+	(fp_line
+		(start -3 5.2)
+		(end 3 5.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "761b9e35-03e3-4ce9-8214-d55749735a95")
+	)
+	(fp_line
+		(start -2.1 -5.1)
+		(end -2.1 -5.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ba631fe3-053c-4c4f-8b03-a3941bc42008")
+	)
+	(fp_line
+		(start -1.9 -5.1)
+		(end -1.9 -5.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "58e1dd6f-9231-4b74-9228-42b510a8ce72")
+	)
+	(fp_line
+		(start 3.5 -4.2)
+		(end 5 -4.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6cd4eee4-00b5-446b-b1e3-522534431e26")
+	)
+	(fp_line
+		(start 5 -4.2)
+		(end 5 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "59b3f140-fa28-4834-a2f5-48034b0ac236")
+	)
+	(fp_arc
+		(start -2.1 -5.1)
+		(mid -2 -5.2)
+		(end -1.9 -5.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8b282678-8d7b-4d8e-913e-ca0358236515")
+	)
+	(fp_arc
+		(start -1.9 -5.1)
+		(mid -2 -5)
+		(end -2.1 -5.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c28d1dc9-21b9-456e-a1d5-41986afaaa49")
+	)
+	(fp_line
+		(start -5.9 -5.7)
+		(end 5.9 -5.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5d08b7e6-e850-4b69-b107-1dd93aa30887")
+	)
+	(fp_line
+		(start -5.9 5.7)
+		(end -5.9 -5.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "aa3e3733-4ea3-4838-b562-69039e31dcc5")
+	)
+	(fp_line
+		(start 5.9 -5.7)
+		(end 5.9 5.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4c066121-4c84-4567-a80a-dbd42db47686")
+	)
+	(fp_line
+		(start 5.9 5.7)
+		(end -5.9 5.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0a43ef66-484e-417e-88ad-74a5657f5c95")
+	)
+	(fp_line
+		(start -5 -4.2)
+		(end 5 -4.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "05f8ee48-0990-4089-9221-55f2ee6d1720")
+	)
+	(fp_line
+		(start -5 5.2)
+		(end -5 -4.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a7a74ca2-b4d2-43a3-9548-2de0fdb91836")
+	)
+	(fp_line
+		(start 5 -4.2)
+		(end 5 5.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "25a66ae1-b9d1-4477-ae0f-2da523c38d14")
+	)
+	(fp_line
+		(start 5 5.2)
+		(end -5 5.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5c1de1e1-1b91-486e-b455-52da0f47623e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "4519dfeb-4f02-41cf-8eb9-abd8796c377a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2 -3.03)
+		(size 1.2 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f9e434d0-0ec3-4b02-8a13-38d62eefb2da")
+	)
+	(pad "2" smd rect
+		(at 0 -3.03)
+		(size 1.2 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8a77d679-0d31-4874-803e-5a9cfaeda9cf")
+	)
+	(pad "3" smd rect
+		(at 2 -3.03)
+		(size 1.2 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fc432313-fd01-4222-9bdb-5446f1023118")
+	)
+	(pad "MP1" smd rect
+		(at -4.55 2.45)
+		(size 1.7 5.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9801c25f-8e58-444d-ba94-72f842617ee7")
+	)
+	(pad "MP2" smd rect
+		(at 4.55 2.45)
+		(size 1.7 5.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9fa40a54-85e4-4fd8-af49-a52f5e0bd745")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Sense&ControlBoard_Libraries/packages3D/502352-0301.stp"
+		(offset
+			(xyz 0 -0.2599999866 3.140000058)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -180)
+		)
+	)
+)
