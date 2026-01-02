@@ -5,10 +5,11 @@
 	(uuid "5f6d83c1-ced0-4d04-8892-4a6fbbe98305")
 	(paper "A3")
 	(title_block
-		(title "Sheet Title A")
-		(date "Last Modified Date")
+		(title "Sensors")
+		(date "2026-01-02")
 		(rev "${REVISION}")
 		(company "${COMPANY}")
+		(comment 1 "GRID - mil (1.27mm)")
 	)
 	(lib_symbols
 		(symbol "0_Connectors:502352-0201"
@@ -2793,7 +2794,9 @@
 		(at 312.42 104.14 0)
 		(effects
 			(font
+				(face "Times New Roman")
 				(size 1.27 1.27)
+				(color 162 22 34 1)
 			)
 		)
 		(uuid "73b1edd8-bdcb-4d04-b589-f88b9b9e4e28")
@@ -2803,7 +2806,9 @@
 		(at 147.32 124.46 0)
 		(effects
 			(font
+				(face "Times New Roman")
 				(size 2 2)
+				(color 162 22 34 1)
 			)
 		)
 		(uuid "c580920a-903b-4565-ae0a-3045655f31d2")
@@ -2813,10 +2818,35 @@
 		(at 182.88 189.865 0)
 		(effects
 			(font
+				(face "Times New Roman")
 				(size 1.27 1.27)
+				(color 162 22 34 1)
 			)
 		)
 		(uuid "e1a3f380-3d5d-46e8-b27e-71b5a25784da")
+	)
+	(text_box "[${#}] ${TITLE}"
+		(exclude_from_sim no)
+		(at 12.7 12.7 0)
+		(size 395.3 27.3)
+		(margins 5.9999 5.9999 5.9999 5.9999)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Times New Roman")
+				(size 8 8)
+				(thickness 1.2)
+				(bold yes)
+				(color 162 22 34 1)
+			)
+		)
+		(uuid "0f2391ea-dcde-4bdc-bfe2-a393d0e1980b")
 	)
 	(text_box "Engine Ignition Pyro"
 		(exclude_from_sim no)
@@ -7442,8 +7472,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 392.43 164.7952 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C14663"
+			(at 383.54 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.002"
+			(at 383.54 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 383.54 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 383.54 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 383.54 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 383.54 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7493,7 +7577,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "0_Passives:D_0805_2012Metric"
+		(property "Footprint" "0_Passives:D_SOD-123"
 			(at 116.84 104.14 0)
 			(effects
 				(font
@@ -7511,8 +7595,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SMD SOD-123 Shottky Diode"
 			(at 116.84 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C8598"
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.017"
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "B5819W SL"
+			(at 120.65 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7737,7 +7875,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "1c9c567f-e6db-4197-b7b0-fca3077ffeb9")
 		(property "Reference" "R22"
 			(at 179.705 177.8 90)
@@ -7757,7 +7895,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "0_Resistors:R_0805_2012_DensityHigh"
+		(property "Footprint" "0_Resistors:R_0603_1608_DensityHigh"
 			(at 209.55 182.88 0)
 			(effects
 				(font
@@ -7775,7 +7913,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
+		(property "Description" "SMD 0603 Chip Resistor"
 			(at 198.12 182.88 0)
 			(effects
 				(font
@@ -7784,7 +7922,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "N/A"
 			(at 177.8 182.88 0)
 			(effects
 				(font
@@ -7793,8 +7931,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
-			(at 177.8 182.88 0)
+		(property "JLC Part Number" "N/A"
+			(at 177.8 182.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7802,8 +7940,35 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
-			(at 177.8 182.88 0)
+		(property "JLC Price" "N/A"
+			(at 177.8 182.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 177.8 182.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 177.8 182.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 177.8 182.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7908,7 +8073,7 @@
 				)
 			)
 		)
-		(property "Value" "STS4L-AD1B-R3"
+		(property "Value" "STS4x"
 			(at 314.96 83.82 0)
 			(effects
 				(font
@@ -7953,7 +8118,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/sensirion/sts4l-ad1b-r3/temperature-sensor-0-4deg-c-dfn/dp/4551122"
+		(property "Farnell Link" "https://uk.farnell.com/sensirion/sts4l-ad1b-r3/temperature-sensor-0-4deg-c-dfn/dp/4551122"
+			(at 302.26 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "4551122"
+			(at 302.26 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "0.52"
+			(at 302.26 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C3663715"
+			(at 302.26 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.38"
 			(at 302.26 88.9 0)
 			(effects
 				(font
@@ -8093,7 +8294,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM ROHS COMPLIANT: YES"
+		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM"
 			(at 38.1 154.94 0)
 			(effects
 				(font
@@ -8111,7 +8312,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+		(property "Farnell Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+			(at 38.1 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C587898"
+			(at 38.1 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.22"
+			(at 38.1 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "3103081"
+			(at 38.1 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "0.95"
 			(at 38.1 154.94 0)
 			(effects
 				(font
@@ -8253,8 +8490,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 361.95 164.7952 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C14663"
+			(at 370.84 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.002"
+			(at 370.84 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 370.84 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 370.84 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 370.84 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 370.84 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8360,7 +8651,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0R2"
+		(property "Value" "0.1R"
 			(at 68.58 147.32 90)
 			(effects
 				(font
@@ -8387,7 +8678,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
+		(property "Description" "SMD 1206 Chip Resistor"
 			(at 45.72 142.24 0)
 			(effects
 				(font
@@ -8396,7 +8687,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "1206W4F100LT5E"
 			(at 66.04 142.24 0)
 			(effects
 				(font
@@ -8405,8 +8696,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
-			(at 66.04 142.24 0)
+		(property "JLC Part Number" "C25334"
+			(at 66.04 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8414,8 +8705,35 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
-			(at 66.04 142.24 0)
+		(property "JLC Price" "0.0037"
+			(at 66.04 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 66.04 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 66.04 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 66.04 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8483,8 +8801,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 163.83 108.2548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C19666"
+			(at 172.72 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.007"
+			(at 172.72 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 172.72 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 172.72 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 172.72 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KO8NNNC"
+			(at 172.72 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8682,8 +9054,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 144.78 204.7748 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C14663"
+			(at 153.67 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.002"
+			(at 153.67 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 153.67 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 153.67 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 153.67 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 153.67 199.39 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8816,7 +9242,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM ROHS COMPLIANT: YES"
+		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM"
 			(at 38.1 208.28 0)
 			(effects
 				(font
@@ -8834,7 +9260,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+		(property "Farnell Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+			(at 38.1 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C587898"
+			(at 38.1 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.22"
+			(at 38.1 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "3103081"
+			(at 38.1 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "0.95"
 			(at 38.1 208.28 0)
 			(effects
 				(font
@@ -9234,8 +9696,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 284.1752 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C57112"
+			(at 289.56 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.002"
+			(at 289.56 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 289.56 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 289.56 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 289.56 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603B103K500NT"
+			(at 289.56 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9407,7 +9923,7 @@
 				)
 			)
 		)
-		(property "Value" "PAC1934T-I_JQ"
+		(property "Value" "PAC1934"
 			(at 147.32 149.86 0)
 			(effects
 				(font
@@ -9415,7 +9931,7 @@
 				)
 			)
 		)
-		(property "Footprint" "0_Sensors:QFN65P400X400X55-17N-D"
+		(property "Footprint" "0_Sensors:PAC1934T-I_JQ"
 			(at 158.75 227 0)
 			(effects
 				(font
@@ -9443,17 +9959,7 @@
 				)
 			)
 		)
-		(property "Height" "0.55"
-			(at 158.75 527 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Farnell Part Number" ""
+		(property "Farnell Part Number" "2907898"
 			(at 158.75 627 0)
 			(effects
 				(font
@@ -9463,33 +9969,48 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" ""
-			(at 158.75 727 0)
+		(property "Farnell Link" "https://uk.farnell.com/microchip/pac1934t-i-jq/dc-power-energy-monitor-with-accumulator/dp/2907898"
+			(at 127 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Microchip"
-			(at 158.75 827 0)
+		(property "Farnell Price" "1.72"
+			(at 127 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Part_Number" "PAC1934T-I/JQ"
-			(at 158.75 927 0)
+		(property "JLC Part Number" "C623960"
+			(at 127 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "2.03"
+			(at 127 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PAC1934T-I/JQ"
+			(at 127 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -9665,8 +10186,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 99.06 113.9952 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C19666"
+			(at 107.95 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.007"
+			(at 107.95 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 107.95 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 107.95 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 107.95 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KO8NNNC"
+			(at 107.95 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9707,7 +10282,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0R2"
+		(property "Value" "0.1R"
 			(at 68.58 200.66 90)
 			(effects
 				(font
@@ -9734,7 +10309,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
+		(property "Description" "SMD 1206 Chip Resistor"
 			(at 45.72 195.58 0)
 			(effects
 				(font
@@ -9743,7 +10318,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "1206W4F100LT5E"
 			(at 66.04 195.58 0)
 			(effects
 				(font
@@ -9752,8 +10327,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
-			(at 66.04 195.58 0)
+		(property "JLC Part Number" "C25334"
+			(at 66.04 195.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9761,8 +10336,35 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
-			(at 66.04 195.58 0)
+		(property "JLC Price" "0.0037"
+			(at 66.04 195.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 66.04 195.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 66.04 195.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 66.04 195.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9964,7 +10566,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM ROHS COMPLIANT: YES"
+		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM"
 			(at 261.62 134.62 0)
 			(effects
 				(font
@@ -9982,7 +10584,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+		(property "Farnell Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+			(at 261.62 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C587898"
+			(at 261.62 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.22"
+			(at 261.62 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "3103081"
+			(at 261.62 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "0.95"
 			(at 261.62 134.62 0)
 			(effects
 				(font
@@ -10029,7 +10667,7 @@
 				)
 			)
 		)
-		(property "Value" "118kR"
+		(property "Value" "120kR"
 			(at 116.84 114.935 0)
 			(effects
 				(font
@@ -10055,7 +10693,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
+		(property "Description" "SMD 0603 Chip Resistor"
 			(at 120.65 88.9 0)
 			(effects
 				(font
@@ -10064,7 +10702,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF1203T5E"
 			(at 120.65 109.22 0)
 			(effects
 				(font
@@ -10073,7 +10711,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "JLC Part Number" "C25808"
 			(at 120.65 109.22 0)
 			(effects
 				(font
@@ -10082,7 +10720,34 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "JLC Price" "0.0008"
+			(at 120.65 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 120.65 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 120.65 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
 			(at 120.65 109.22 0)
 			(effects
 				(font
@@ -10190,7 +10855,7 @@
 				)
 			)
 		)
-		(property "Value" "LM27313XMFX_NOPB"
+		(property "Value" "LM27313"
 			(at 147.32 99.06 0)
 			(effects
 				(font
@@ -10198,7 +10863,7 @@
 				)
 			)
 		)
-		(property "Footprint" "0_Power:SOT95P280X145-5N"
+		(property "Footprint" "0_Power:SOT-23-5"
 			(at 157.48 199.06 0)
 			(effects
 				(font
@@ -10218,7 +10883,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Dc/DC Boost converter"
+		(property "Description" "DC/DC Boost converter"
 			(at 147.32 114.3 0)
 			(effects
 				(font
@@ -10235,7 +10900,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/texas-instruments/lm27313xmfx-nopb/dc-dc-conv-buck-1-6mhz-sot-23/dp/3121547"
+		(property "Farnell Link" "https://uk.farnell.com/texas-instruments/lm27313xmfx-nopb/dc-dc-conv-buck-1-6mhz-sot-23/dp/3121547"
+			(at 133.35 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C341750"
+			(at 133.35 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.32"
+			(at 133.35 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "3121547"
+			(at 133.35 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "1.85"
 			(at 133.35 104.14 0)
 			(effects
 				(font
@@ -10313,7 +11014,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM ROHS COMPLIANT: YES"
+		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM"
 			(at 38.1 104.14 0)
 			(effects
 				(font
@@ -10331,7 +11032,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+		(property "Farnell Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+			(at 38.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C587898"
+			(at 38.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.22"
+			(at 38.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "3103081"
+			(at 38.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "0.95"
 			(at 38.1 104.14 0)
 			(effects
 				(font
@@ -10407,8 +11144,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Inductors for Power Circuits, Wound Ferrite, for Automotive"
+		(property "Description" "Inductor - NOTE: Comp 10uH"
 			(at 121.412 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C1051"
+			(at 125.73 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.015"
+			(at 125.73 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 125.73 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 125.73 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 125.73 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CMI321609X100KT"
+			(at 125.73 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10474,8 +11265,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 284.1752 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C57112"
+			(at 289.56 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.002"
+			(at 289.56 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 289.56 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 289.56 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 289.56 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603B103K500NT"
+			(at 289.56 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10580,7 +11425,7 @@
 				)
 			)
 		)
-		(property "Value" "MCP96RL00-E_MX"
+		(property "Value" "MCP96R00"
 			(at 325.12 182.88 0)
 			(effects
 				(font
@@ -10588,7 +11433,7 @@
 				)
 			)
 		)
-		(property "Footprint" "0_Sensors:QFN65P500X500X100-21N-D"
+		(property "Footprint" "0_Sensors:MCP9600L00"
 			(at 309.88 205.74 0)
 			(effects
 				(font
@@ -10625,26 +11470,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/microchip/mcp96rl00-e-mx/thermocouple-emf-temp-converter/dp/2991624#anchorTechnicalDOCS"
-			(at 317.5 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "1"
-			(at 346.71 587.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Farnell Part Number" ""
+		(property "Farnell Part Number" "2991624"
 			(at 346.71 687.96 0)
 			(effects
 				(font
@@ -10654,33 +11480,39 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" ""
-			(at 346.71 787.96 0)
+		(property "Farnell Link" "https://uk.farnell.com/microchip/mcp96rl00-e-mx/thermocouple-emf-temp-converter/dp/2991624#anchorTechnicalDOCS"
+			(at 317.5 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Microchip"
-			(at 346.71 887.96 0)
+		(property "Farnell Price" "3.49"
+			(at 317.5 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Part_Number" "MCP96RL00-E/MX"
-			(at 346.71 987.96 0)
+		(property "JLC Part Number" "C638823"
+			(at 317.5 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "4.57"
+			(at 317.5 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -10803,7 +11635,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM ROHS COMPLIANT: YES"
+		(property "Description" "MOLEX - 502352-0201 - WTB CONN, HEADER, 2POS, 1ROW, 2MM"
 			(at 261.62 190.5 0)
 			(effects
 				(font
@@ -10821,7 +11653,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+		(property "Farnell Link" "https://uk.farnell.com/molex/502352-0201/wtb-conn-header-2pos-1row-2mm/dp/3103081"
+			(at 261.62 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C587898"
+			(at 261.62 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.22"
+			(at 261.62 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "3103081"
+			(at 261.62 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "0.95"
 			(at 261.62 190.5 0)
 			(effects
 				(font
@@ -10934,7 +11802,7 @@
 				)
 			)
 		)
-		(property "Value" "MCP96RL00-E_MX"
+		(property "Value" "MCP96R00"
 			(at 325.12 127 0)
 			(effects
 				(font
@@ -10942,7 +11810,7 @@
 				)
 			)
 		)
-		(property "Footprint" "0_Sensors:QFN65P500X500X100-21N-D"
+		(property "Footprint" "0_Sensors:MCP9600L00"
 			(at 309.88 149.86 0)
 			(effects
 				(font
@@ -10979,26 +11847,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" "https://uk.farnell.com/microchip/mcp96rl00-e-mx/thermocouple-emf-temp-converter/dp/2991624#anchorTechnicalDOCS"
-			(at 317.5 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "1"
-			(at 346.71 532.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Farnell Part Number" ""
+		(property "Farnell Part Number" "2991624"
 			(at 346.71 632.08 0)
 			(effects
 				(font
@@ -11008,33 +11857,39 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" ""
-			(at 346.71 732.08 0)
+		(property "Farnell Link" "https://uk.farnell.com/microchip/mcp96rl00-e-mx/thermocouple-emf-temp-converter/dp/2991624"
+			(at 317.5 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Microchip"
-			(at 346.71 832.08 0)
+		(property "Farnell Price" "3.49"
+			(at 317.5 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Part_Number" "MCP96RL00-E/MX"
-			(at 346.71 932.08 0)
+		(property "JLC Part Number" "C638823"
+			(at 317.5 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "4.57"
+			(at 317.5 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -11194,7 +12049,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "13.3kR"
+		(property "Value" "13kR"
 			(at 128.27 116.84 90)
 			(effects
 				(font
@@ -11221,7 +12076,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
+		(property "Description" "SMD 0603 Chip Resistor"
 			(at 146.05 119.38 0)
 			(effects
 				(font
@@ -11230,7 +12085,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF1302T5E"
 			(at 125.73 119.38 0)
 			(effects
 				(font
@@ -11239,8 +12094,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
-			(at 125.73 119.38 0)
+		(property "JLC Part Number" "C22797"
+			(at 125.73 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11248,8 +12103,35 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
-			(at 125.73 119.38 0)
+		(property "JLC Price" "0.0008"
+			(at 125.73 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 125.73 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 125.73 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 125.73 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11317,8 +12199,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 132.08 204.7748 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C14663"
+			(at 140.97 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.002"
+			(at 140.97 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 140.97 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 140.97 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 140.97 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 140.97 199.39 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11386,8 +12322,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 MLCC capacitor, Alternate KiCad Library"
+		(property "Description" "SMD 0603 MLCC capacitor"
 			(at 326.39 91.7448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Part Number" "C14663"
+			(at 335.28 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Price" "0.002"
+			(at 335.28 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 335.28 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 335.28 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 335.28 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 335.28 86.36 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11494,7 +12484,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0R2"
+		(property "Value" "0.1R"
 			(at 68.58 96.52 90)
 			(effects
 				(font
@@ -11521,7 +12511,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
+		(property "Description" "SMD 1206 Chip Resistor"
 			(at 45.72 91.44 0)
 			(effects
 				(font
@@ -11530,7 +12520,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "1206W4F100LT5E"
 			(at 66.04 91.44 0)
 			(effects
 				(font
@@ -11539,8 +12529,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
-			(at 66.04 91.44 0)
+		(property "JLC Part Number" "C25334"
+			(at 66.04 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11548,8 +12538,35 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
-			(at 66.04 91.44 0)
+		(property "JLC Price" "0.0037"
+			(at 66.04 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Link" "~"
+			(at 66.04 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "~"
+			(at 66.04 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price" "~"
+			(at 66.04 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)

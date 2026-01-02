@@ -4,7 +4,7 @@
 	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at -13.5 -11.75 0)
+		(at 0 -6 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "c0c0b203-6630-4f8c-becd-dab591d0c424")
@@ -16,9 +16,10 @@
 		)
 	)
 	(property "Value" "BUZZER,7.5x7.5mm"
-		(at -13.5 -10.25 0)
+		(at -15 -1.5 0)
 		(unlocked yes)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "cb8d6525-0a8b-4734-aa77-c0db71bd10ff")
 		(effects
 			(font
@@ -105,8 +106,69 @@
 		(layer "F.SilkS")
 		(uuid "92c6e315-f9db-49f3-a767-284b75d958d2")
 	)
+	(fp_rect
+		(start -5 -5)
+		(end 5 5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e43b4d26-780f-4bb2-a70c-1331a2bd0634")
+	)
+	(fp_line
+		(start -3.75 -2.5)
+		(end -3.75 3.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "617947c3-4ae3-4edc-a509-e1d6745a7a90")
+	)
+	(fp_line
+		(start -2.5 -3.75)
+		(end -3.75 -2.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "23a96add-3524-4b4f-99ee-98ca13a53bc0")
+	)
+	(fp_line
+		(start 3.75 -3.75)
+		(end -2.5 -3.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "74b9b98a-a447-44bd-9eb6-e5a0cb605479")
+	)
+	(fp_line
+		(start 3.75 -3.75)
+		(end 3.75 3.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "ca068e88-740f-4b26-b3e2-8674fa110c62")
+	)
+	(fp_line
+		(start 3.75 3.75)
+		(end -3.75 3.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "b1f64fa1-6fe7-4980-a37a-820e3316a4e1")
+	)
 	(fp_text user "${REFERENCE}"
-		(at -13.5 -8.75 0)
+		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "0d5f169c-624b-414f-a4f0-523bbc3903a9")
@@ -146,4 +208,15 @@
 		(uuid "18a95f59-f38d-4d16-bd00-2a0c16fcc72a")
 	)
 	(embedded_fonts no)
+	(model "${CUSTOM_3D_LIB_DIR}/MagneticBuzzer_Kobitone_254-EMB84Q-RO.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 0.85 0.85 0.8)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
 )

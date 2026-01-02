@@ -6,7 +6,7 @@
 	(descr "DF11-10DS-2DSA")
 	(tags "Connector")
 	(property "Reference" "REF**"
-		(at 4 -1 0)
+		(at 4 3.2 0)
 		(layer "F.SilkS")
 		(uuid "b9930aab-d4c7-4e2b-84b9-06fc5c059830")
 		(effects
