@@ -18392,7 +18392,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "Farnell"
 			(at 298.45 153.67 0)
 			(effects
 				(font
@@ -18410,7 +18410,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "5023520301"
+		(property "Min Qty" "10"
 			(at 298.45 153.67 0)
 			(effects
 				(font
@@ -18419,7 +18419,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" " C587901"
+		(property "Order Code" "3365016"
 			(at 298.45 153.67 0)
 			(effects
 				(font
@@ -18428,7 +18428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.84"
 			(at 298.45 153.67 0)
 			(effects
 				(font
@@ -18516,7 +18516,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603B103K500NT"
+		(property "MPN" "0603B103K500NT"
 			(at 152.4 116.84 90)
 			(effects
 				(font
@@ -18525,7 +18525,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C57112"
+		(property "Min Qty" "20"
 			(at 152.4 116.84 90)
 			(effects
 				(font
@@ -18534,7 +18534,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "C57112"
+			(at 152.4 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.002"
+			(at 152.4 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 152.4 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 152.4 116.84 90)
 			(effects
 				(font
@@ -18677,7 +18704,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "MPN" "0603WAF1002T5E"
 			(at 144.78 185.42 90)
 			(effects
 				(font
@@ -18686,7 +18713,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF1002T5E"
+		(property "Min Qty" "20"
 			(at 144.78 185.42 90)
 			(effects
 				(font
@@ -18695,7 +18722,34 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C25804"
+		(property "Order Code" "C25804"
+			(at 144.78 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.0008"
+			(at 144.78 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 144.78 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 144.78 185.42 90)
 			(effects
 				(font
@@ -18907,16 +18961,6 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Multicomp Pro"
-			(at 73.66 609.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
 		(property "MPN" "MP011756"
 			(at 73.66 709.22 0)
 			(effects
@@ -18936,7 +18980,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "XT30PW-M30.G.Y "
+		(property "Min Qty" "5"
 			(at 95.25 114.3 0)
 			(effects
 				(font
@@ -18945,7 +18989,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C431092"
+		(property "Order Code" "4220281"
 			(at 95.25 114.3 0)
 			(effects
 				(font
@@ -18954,7 +18998,16 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.39"
+			(at 95.25 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
 			(at 95.25 114.3 0)
 			(effects
 				(font
@@ -19238,34 +19291,6 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Hirose"
-			(at 377.19 -345.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "JLC_MPN" "DF11-10DP-2DSA(08)"
-			(at 358.14 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC_PART" "C506656"
-			(at 358.14 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "MPN" "DF11-10DP-2DSA(24)"
 			(at 358.14 149.86 0)
 			(effects
@@ -19275,7 +19300,43 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Min Qty" "10"
+			(at 358.14 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" "1688345"
+			(at 358.14 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.6"
+			(at 358.14 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
+			(at 358.14 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 358.14 149.86 0)
 			(effects
 				(font
@@ -19443,7 +19504,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "~"
+		(property "Min Qty" ""
 			(at 52.07 182.88 0)
 			(effects
 				(font
@@ -19452,7 +19513,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "~"
+		(property "Order Code" "~"
 			(at 52.07 182.88 0)
 			(effects
 				(font
@@ -19461,7 +19522,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" ""
 			(at 52.07 182.88 0)
 			(effects
 				(font
@@ -19668,24 +19729,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" " MIC29302AWD-TR"
-			(at 222.25 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC_PART" " C627907"
-			(at 222.25 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "MPN" "MIC29302AWD-TR"
 			(at 222.25 102.87 0)
 			(effects
@@ -19695,7 +19738,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier_Link" "https://uk.farnell.com/microchip/mic29302awd-tr/ldo-adj-1-25-15v-3a-to-252-5/dp/2857615"
+		(property "Min Qty" "1"
 			(at 222.25 102.87 0)
 			(effects
 				(font
@@ -19704,7 +19747,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "2857615"
+			(at 222.25 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "2.28"
+			(at 222.25 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
+			(at 222.25 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "https://uk.farnell.com/microchip/mic29302awd-tr/ldo-adj-1-25-15v-3a-to-252-5/dp/2857615"
 			(at 222.25 102.87 0)
 			(effects
 				(font
@@ -19858,7 +19928,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF510JT5E"
 			(at 167.64 127 0)
 			(effects
 				(font
@@ -19867,7 +19937,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 167.64 127 0)
 			(effects
 				(font
@@ -19876,7 +19946,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 167.64 127 0)
 			(effects
 				(font
@@ -19885,7 +19955,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF510JT5E"
+		(property "Min Qty" "20"
 			(at 167.64 127 90)
 			(effects
 				(font
@@ -19894,7 +19964,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C23197"
+		(property "Order Code" "C23197"
 			(at 167.64 127 90)
 			(effects
 				(font
@@ -19903,7 +19973,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 167.64 127 90)
 			(effects
 				(font
@@ -19985,7 +20055,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1101M2S3AQE2"
+		(property "MPN" "~"
 			(at 118.11 143.51 90)
 			(effects
 				(font
@@ -19994,7 +20064,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "Farnell"
 			(at 118.11 143.51 90)
 			(effects
 				(font
@@ -20012,7 +20082,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "SS-12D06-G030"
+		(property "Min Qty" "~"
 			(at 118.11 143.51 90)
 			(effects
 				(font
@@ -20021,7 +20091,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C17179519"
+		(property "Order Code" "~"
 			(at 118.11 143.51 90)
 			(effects
 				(font
@@ -20030,7 +20100,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "~"
 			(at 118.11 143.51 90)
 			(effects
 				(font
@@ -20117,7 +20187,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF4703T5E"
 			(at 27.94 138.43 0)
 			(effects
 				(font
@@ -20126,7 +20196,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 27.94 138.43 0)
 			(effects
 				(font
@@ -20135,7 +20205,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 27.94 138.43 0)
 			(effects
 				(font
@@ -20144,7 +20214,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF4703T5E"
+		(property "Min Qty" "20"
 			(at 27.94 138.43 90)
 			(effects
 				(font
@@ -20153,7 +20223,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C23178"
+		(property "Order Code" "C23178"
 			(at 27.94 138.43 90)
 			(effects
 				(font
@@ -20162,7 +20232,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 27.94 138.43 90)
 			(effects
 				(font
@@ -20241,7 +20311,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "CC0603KRX7R9BB104"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 180.34 198.12 90)
 			(effects
 				(font
@@ -20250,7 +20320,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C14663"
+		(property "Min Qty" "20"
 			(at 180.34 198.12 90)
 			(effects
 				(font
@@ -20259,7 +20329,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "C14663"
+			(at 180.34 198.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.002"
+			(at 180.34 198.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 180.34 198.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 180.34 198.12 90)
 			(effects
 				(font
@@ -20610,7 +20707,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "Farnell"
 			(at 298.45 120.65 0)
 			(effects
 				(font
@@ -20628,7 +20725,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "5023520301"
+		(property "Min Qty" "10"
 			(at 298.45 120.65 0)
 			(effects
 				(font
@@ -20637,7 +20734,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" " C587901"
+		(property "Order Code" "3365016"
 			(at 298.45 120.65 0)
 			(effects
 				(font
@@ -20646,7 +20743,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.84"
 			(at 298.45 120.65 0)
 			(effects
 				(font
@@ -20931,7 +21028,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "~"
+		(property "Min Qty" ""
 			(at 44.45 194.31 0)
 			(effects
 				(font
@@ -20940,7 +21037,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "~"
+		(property "Order Code" "~"
 			(at 44.45 194.31 0)
 			(effects
 				(font
@@ -20949,7 +21046,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" ""
 			(at 44.45 194.31 0)
 			(effects
 				(font
@@ -21021,7 +21118,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603B103K500NT"
+		(property "MPN" "0603B103K500NT"
 			(at 132.08 124.46 90)
 			(effects
 				(font
@@ -21030,7 +21127,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C57112"
+		(property "Min Qty" "20"
 			(at 132.08 124.46 90)
 			(effects
 				(font
@@ -21039,7 +21136,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "C57112"
+			(at 132.08 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.002"
+			(at 132.08 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 132.08 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 132.08 124.46 90)
 			(effects
 				(font
@@ -21265,8 +21389,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "SMD1210B075TF/24"
-			(at 118.11 111.76 0)
+		(property "Min Qty" "5"
+			(at 118.11 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21274,8 +21398,8 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
-			(at 118.11 111.76 0)
+		(property "Order Code" "4072044"
+			(at 118.11 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21283,8 +21407,17 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C634245"
-			(at 118.11 111.76 0)
+		(property "Price Per" "0.12"
+			(at 118.11 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
+			(at 118.11 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21492,7 +21625,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF1200T5E"
 			(at 240.03 170.18 0)
 			(effects
 				(font
@@ -21501,7 +21634,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 240.03 170.18 0)
 			(effects
 				(font
@@ -21510,7 +21643,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 240.03 170.18 0)
 			(effects
 				(font
@@ -21519,7 +21652,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF1200T5E"
+		(property "Min Qty" "20"
 			(at 240.03 170.18 90)
 			(effects
 				(font
@@ -21528,7 +21661,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C22787"
+		(property "Order Code" "C22787"
 			(at 240.03 170.18 90)
 			(effects
 				(font
@@ -21537,7 +21670,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 240.03 170.18 90)
 			(effects
 				(font
@@ -21625,7 +21758,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "Farnell"
 			(at 101.6 187.96 0)
 			(effects
 				(font
@@ -21643,7 +21776,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "2060-452/998-404"
+		(property "Min Qty" "1"
 			(at 101.6 187.96 0)
 			(effects
 				(font
@@ -21652,7 +21785,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C2765055"
+		(property "Order Code" "2499130"
 			(at 101.6 187.96 0)
 			(effects
 				(font
@@ -21661,7 +21794,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.76"
 			(at 101.6 187.96 0)
 			(effects
 				(font
@@ -21740,7 +21873,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "MPN" "0603WAF1002T5E"
 			(at 147.32 185.42 90)
 			(effects
 				(font
@@ -21749,7 +21882,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF1002T5E"
+		(property "Min Qty" "20"
 			(at 147.32 185.42 90)
 			(effects
 				(font
@@ -21758,7 +21891,34 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C25804"
+		(property "Order Code" "C25804"
+			(at 147.32 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.0008"
+			(at 147.32 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 147.32 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 147.32 185.42 90)
 			(effects
 				(font
@@ -21836,7 +21996,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "CL10A106KP8NNNC"
+		(property "MPN" "CL10A106KP8NNNC"
 			(at 213.36 132.08 90)
 			(effects
 				(font
@@ -21845,7 +22005,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C19702"
+		(property "Min Qty" "20"
 			(at 213.36 132.08 90)
 			(effects
 				(font
@@ -21854,7 +22014,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "C19702"
+			(at 213.36 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.002"
+			(at 213.36 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 213.36 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 213.36 132.08 90)
 			(effects
 				(font
@@ -21930,7 +22117,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF4700T5E"
 			(at 240.03 160.02 0)
 			(effects
 				(font
@@ -21939,7 +22126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 240.03 160.02 0)
 			(effects
 				(font
@@ -21948,7 +22135,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 240.03 160.02 0)
 			(effects
 				(font
@@ -21957,7 +22144,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF4700T5E"
+		(property "Min Qty" "20"
 			(at 240.03 160.02 90)
 			(effects
 				(font
@@ -21966,7 +22153,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C23179"
+		(property "Order Code" "C23179"
 			(at 240.03 160.02 90)
 			(effects
 				(font
@@ -21975,7 +22162,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 240.03 160.02 90)
 			(effects
 				(font
@@ -22186,7 +22373,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" " KT-0603R"
+		(property "MPN" "MP008277"
 			(at 167.64 116.84 90)
 			(effects
 				(font
@@ -22195,7 +22382,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" " C2286"
+		(property "Min Qty" "5"
 			(at 167.64 116.84 90)
 			(effects
 				(font
@@ -22204,7 +22391,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "3796306"
+			(at 167.64 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.13"
+			(at 167.64 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
+			(at 167.64 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 167.64 116.84 90)
 			(effects
 				(font
@@ -22291,8 +22505,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier_Link" "https://uk.farnell.com/rohm/bv1hj180efj-ce2/power-load-sw-high-side-40-to/dp/4137626"
-			(at 116.84 214.63 0)
+		(property "Min Qty" "1"
+			(at 114.3 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22300,8 +22514,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "BV1HJ180EFJ-CE2"
-			(at 121.92 205.74 0)
+		(property "Order Code" "4137626"
+			(at 114.3 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22309,8 +22523,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C17347420"
-			(at 121.92 208.28 0)
+		(property "Price Per" "0.96"
+			(at 114.3 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22318,7 +22532,16 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Supplier" "Farnell"
+			(at 114.3 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "https://uk.farnell.com/rohm/bv1hj180efj-ce2/power-load-sw-high-side-40-to/dp/4137626"
 			(at 114.3 187.96 0)
 			(effects
 				(font
@@ -22483,7 +22706,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF3903T5E"
 			(at 27.94 151.13 0)
 			(effects
 				(font
@@ -22492,7 +22715,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 27.94 151.13 0)
 			(effects
 				(font
@@ -22501,7 +22724,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 27.94 151.13 0)
 			(effects
 				(font
@@ -22510,7 +22733,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF3903T5E"
+		(property "Min Qty" "20"
 			(at 27.94 151.13 90)
 			(effects
 				(font
@@ -22519,7 +22742,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C23150"
+		(property "Order Code" "C23150"
 			(at 27.94 151.13 90)
 			(effects
 				(font
@@ -22528,7 +22751,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 27.94 151.13 90)
 			(effects
 				(font
@@ -22604,7 +22827,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF4700T5E"
 			(at 240.03 96.52 0)
 			(effects
 				(font
@@ -22613,7 +22836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 240.03 96.52 0)
 			(effects
 				(font
@@ -22622,7 +22845,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 240.03 96.52 0)
 			(effects
 				(font
@@ -22631,7 +22854,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF4700T5E"
+		(property "Min Qty" "20"
 			(at 240.03 96.52 90)
 			(effects
 				(font
@@ -22640,7 +22863,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C23179"
+		(property "Order Code" "C23179"
 			(at 240.03 96.52 90)
 			(effects
 				(font
@@ -22649,7 +22872,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 240.03 96.52 90)
 			(effects
 				(font
@@ -23064,7 +23287,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "Farnell"
 			(at 298.45 186.69 0)
 			(effects
 				(font
@@ -23082,7 +23305,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "5023520301"
+		(property "Min Qty" "10"
 			(at 298.45 186.69 0)
 			(effects
 				(font
@@ -23091,7 +23314,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" " C587901"
+		(property "Order Code" "3365016"
 			(at 298.45 186.69 0)
 			(effects
 				(font
@@ -23100,7 +23323,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.84"
 			(at 298.45 186.69 0)
 			(effects
 				(font
@@ -23251,7 +23474,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF4701T5E"
 			(at 160.02 190.5 0)
 			(effects
 				(font
@@ -23260,7 +23483,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 160.02 190.5 0)
 			(effects
 				(font
@@ -23269,7 +23492,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 160.02 190.5 0)
 			(effects
 				(font
@@ -23278,7 +23501,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF4701T5E"
+		(property "Min Qty" "20"
 			(at 160.02 190.5 0)
 			(effects
 				(font
@@ -23287,7 +23510,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C23162"
+		(property "Order Code" "C23162"
 			(at 160.02 190.5 0)
 			(effects
 				(font
@@ -23296,7 +23519,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 160.02 190.5 0)
 			(effects
 				(font
@@ -23573,7 +23796,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "~"
+		(property "Min Qty" ""
 			(at 44.45 198.12 0)
 			(effects
 				(font
@@ -23582,7 +23805,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "~"
+		(property "Order Code" "~"
 			(at 44.45 198.12 0)
 			(effects
 				(font
@@ -23591,7 +23814,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" ""
 			(at 44.45 198.12 0)
 			(effects
 				(font
@@ -23681,7 +23904,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "SMD1210B075TF/24"
+		(property "Min Qty" "5"
 			(at 128.27 114.3 0)
 			(effects
 				(font
@@ -23690,7 +23913,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "4072044"
 			(at 128.27 114.3 0)
 			(effects
 				(font
@@ -23699,7 +23922,16 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C634245"
+		(property "Price Per" "0.12"
+			(at 128.27 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
 			(at 128.27 114.3 0)
 			(effects
 				(font
@@ -23777,7 +24009,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "~"
+		(property "Min Qty" ""
 			(at 36.83 182.88 0)
 			(effects
 				(font
@@ -23786,7 +24018,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "~"
+		(property "Order Code" "~"
 			(at 36.83 182.88 0)
 			(effects
 				(font
@@ -23795,7 +24027,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" ""
 			(at 36.83 182.88 0)
 			(effects
 				(font
@@ -23871,7 +24103,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "CL10A106KP8NNNC"
+		(property "MPN" "CL10A106KP8NNNC"
 			(at 236.22 132.08 90)
 			(effects
 				(font
@@ -23880,7 +24112,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C19702"
+		(property "Min Qty" "20"
 			(at 236.22 132.08 90)
 			(effects
 				(font
@@ -23889,7 +24121,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "C19702"
+			(at 236.22 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.002"
+			(at 236.22 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 236.22 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 236.22 132.08 90)
 			(effects
 				(font
@@ -24165,7 +24424,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "~"
+		(property "Min Qty" ""
 			(at 59.69 182.88 0)
 			(effects
 				(font
@@ -24174,7 +24433,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "~"
+		(property "Order Code" "~"
 			(at 59.69 182.88 0)
 			(effects
 				(font
@@ -24183,7 +24442,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" ""
 			(at 59.69 182.88 0)
 			(effects
 				(font
@@ -24260,34 +24519,6 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Hirose"
-			(at 377.19 670.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "JLC_MPN" "DF11-10DP-2DSA(08)"
-			(at 358.14 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC_PART" "C506656"
-			(at 358.14 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "MPN" "DF11-10DP-2DSA(24)"
 			(at 358.14 175.26 0)
 			(effects
@@ -24297,7 +24528,43 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Min Qty" "10"
+			(at 358.14 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" "1688345"
+			(at 358.14 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.6"
+			(at 358.14 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
+			(at 358.14 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 358.14 175.26 0)
 			(effects
 				(font
@@ -24465,7 +24732,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "MPN" "0603WAF5102T5E"
 			(at 109.22 182.88 90)
 			(effects
 				(font
@@ -24474,7 +24741,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF5102T5E"
+		(property "Min Qty" "20"
 			(at 109.22 182.88 90)
 			(effects
 				(font
@@ -24483,7 +24750,34 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C23196"
+		(property "Order Code" "C23196"
+			(at 109.22 182.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.0008"
+			(at 109.22 182.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 109.22 182.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 109.22 182.88 90)
 			(effects
 				(font
@@ -24561,7 +24855,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "CL10A106KP8NNNC"
+		(property "MPN" "CL10A106KP8NNNC"
 			(at 241.3 132.08 90)
 			(effects
 				(font
@@ -24570,7 +24864,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C19702"
+		(property "Min Qty" "20"
 			(at 241.3 132.08 90)
 			(effects
 				(font
@@ -24579,7 +24873,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "C19702"
+			(at 241.3 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.002"
+			(at 241.3 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 241.3 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 241.3 132.08 90)
 			(effects
 				(font
@@ -24657,24 +24978,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" " MIC29302AWD-TR"
-			(at 222.25 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC_PART" " C627907"
-			(at 222.25 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "MPN" "MIC29302AWD-TR"
 			(at 222.25 166.37 0)
 			(effects
@@ -24684,7 +24987,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier_Link" "https://uk.farnell.com/microchip/mic29302awd-tr/ldo-adj-1-25-15v-3a-to-252-5/dp/2857615"
+		(property "Min Qty" "1"
 			(at 222.25 166.37 0)
 			(effects
 				(font
@@ -24693,7 +24996,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "2857615"
+			(at 222.25 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "2.28"
+			(at 222.25 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
+			(at 222.25 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "https://uk.farnell.com/microchip/mic29302awd-tr/ldo-adj-1-25-15v-3a-to-252-5/dp/2857615"
 			(at 222.25 166.37 0)
 			(effects
 				(font
@@ -24978,7 +25308,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "~"
+		(property "Min Qty" ""
 			(at 44.45 182.88 0)
 			(effects
 				(font
@@ -24987,7 +25317,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "~"
+		(property "Order Code" "~"
 			(at 44.45 182.88 0)
 			(effects
 				(font
@@ -24996,7 +25326,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" ""
 			(at 44.45 182.88 0)
 			(effects
 				(font
@@ -25072,7 +25402,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "CL10A106KP8NNNC"
+		(property "MPN" "CL10A106KP8NNNC"
 			(at 208.28 132.08 90)
 			(effects
 				(font
@@ -25081,7 +25411,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C19702"
+		(property "Min Qty" "20"
 			(at 208.28 132.08 90)
 			(effects
 				(font
@@ -25090,7 +25420,34 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Order Code" "C19702"
+			(at 208.28 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "0.002"
+			(at 208.28 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 208.28 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Link" "~"
 			(at 208.28 132.08 90)
 			(effects
 				(font
@@ -25170,7 +25527,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "~"
+		(property "Min Qty" ""
 			(at 44.45 201.93 0)
 			(effects
 				(font
@@ -25179,7 +25536,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "~"
+		(property "Order Code" "~"
 			(at 44.45 201.93 0)
 			(effects
 				(font
@@ -25188,7 +25545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" ""
 			(at 44.45 201.93 0)
 			(effects
 				(font
@@ -25275,7 +25632,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "NCP1117LPST33T3G"
+		(property "Min Qty" "5"
 			(at 134.62 114.3 0)
 			(effects
 				(font
@@ -25284,7 +25641,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C146799"
+		(property "Order Code" "2534283"
 			(at 134.62 114.3 0)
 			(effects
 				(font
@@ -25293,7 +25650,16 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "1.91"
+			(at 134.62 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
 			(at 134.62 114.3 0)
 			(effects
 				(font
@@ -25441,7 +25807,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "0603WAF1200T5E"
 			(at 240.03 106.68 0)
 			(effects
 				(font
@@ -25450,7 +25816,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "JLCPCB"
 			(at 240.03 106.68 0)
 			(effects
 				(font
@@ -25459,7 +25825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier Link" ""
+		(property "Supplier Link" "~"
 			(at 240.03 106.68 0)
 			(effects
 				(font
@@ -25468,7 +25834,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_MPN" "0603WAF1200T5E"
+		(property "Min Qty" "20"
 			(at 240.03 106.68 90)
 			(effects
 				(font
@@ -25477,7 +25843,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC_PART" "C22787"
+		(property "Order Code" "C22787"
 			(at 240.03 106.68 90)
 			(effects
 				(font
@@ -25486,7 +25852,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" ""
+		(property "Price Per" "0.0008"
 			(at 240.03 106.68 90)
 			(effects
 				(font

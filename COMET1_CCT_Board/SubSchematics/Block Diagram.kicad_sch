@@ -651,7 +651,7 @@
 		)
 		(uuid "ff9c4a24-4e43-4d0e-b290-0ad1fd2649b7")
 	)
-	(text_box "GPIO_??"
+	(text_box "GPIO_36"
 		(exclude_from_sim no)
 		(at 264 214.5 0)
 		(size 18.088 7)
@@ -792,7 +792,7 @@
 		)
 		(uuid "12cb6a7d-5baa-4aaa-88d3-529db140fa3e")
 	)
-	(text_box "A: I2C_0x??\nB: I2C_0x??"
+	(text_box "A: I2C_0x6E\nB: I2C_0x60"
 		(exclude_from_sim no)
 		(at 264 92 0)
 		(size 30 7)
@@ -928,7 +928,7 @@
 		)
 		(uuid "25c5dcc0-3859-4e6e-a251-79686bd4fb58")
 	)
-	(text_box "Ext. Thermocouple Interface"
+	(text_box "Ext. Thermocouple ADC"
 		(exclude_from_sim no)
 		(at 329 175 0)
 		(size 42 12)
@@ -1140,7 +1140,7 @@
 		)
 		(uuid "2f4ea794-3980-426c-a3e6-f1b1cd61beb2")
 	)
-	(text_box "FILL - GPIO_??\nARM - GPIO_??\nFIRE - GPIO_??\n"
+	(text_box "FIRE - GPIO_4\nARM - GPIO_5\nFILL - GPIO_6\n\n"
 		(exclude_from_sim no)
 		(at 187 190.758 0)
 		(size 30 7.62)
@@ -1164,11 +1164,11 @@
 		)
 		(uuid "317ab264-3965-4ff6-93e9-07c27f6a7d8f")
 	)
-	(text_box "GPIO_??\nGPIO_??"
+	(text_box "Red - GPIO_38\nGreen - GPIO_39"
 		(exclude_from_sim no)
 		(at 264 202.5 0)
 		(size 18.088 7)
-		(margins 1.7144 1.7144 1.7144 1.7144)
+		(margins 1 1 1 1)
 		(stroke
 			(width -0.0001)
 			(type solid)
@@ -1181,7 +1181,7 @@
 		(effects
 			(font
 				(face "Times New Roman")
-				(size 2.286 2.286)
+				(size 1.5 1.5)
 				(italic yes)
 				(color 162 22 34 1)
 			)
@@ -1235,7 +1235,7 @@
 		)
 		(uuid "34f97dad-9bc3-424e-b006-bedf003458aa")
 	)
-	(text_box "RED LED\nGREEN LED"
+	(text_box "STATUS LEDs"
 		(exclude_from_sim no)
 		(at 284 201.5 0)
 		(size 34 9)
@@ -1433,7 +1433,7 @@
 		)
 		(fill
 			(type color)
-			(color 175 67 103 1)
+			(color 194 117 135 1)
 		)
 		(effects
 			(font
@@ -1651,7 +1651,7 @@
 		)
 		(uuid "6abfab5e-8a59-4a17-a0bc-3e6cfb0e6a60")
 	)
-	(text_box "GPIO_??"
+	(text_box "GPIO_13"
 		(exclude_from_sim no)
 		(at 187 73 0)
 		(size 30 7)
@@ -1756,7 +1756,7 @@
 		)
 		(fill
 			(type color)
-			(color 175 67 103 1)
+			(color 194 117 135 1)
 		)
 		(effects
 			(font
@@ -2297,7 +2297,7 @@
 		)
 		(uuid "c7dabab1-1380-4b0c-98bf-682f8750abbc")
 	)
-	(text_box "Addr. = 0x??"
+	(text_box "Addr. = 0x44"
 		(exclude_from_sim no)
 		(at 264 102 0)
 		(size 30 7)
@@ -2715,7 +2715,7 @@
 		)
 		(uuid "f8b5739d-0e1d-48d6-b47b-eec507146b0a")
 	)
-	(text_box "Addr. = 0x??"
+	(text_box "Addr. = 0x20"
 		(exclude_from_sim no)
 		(at 264 125 0)
 		(size 30 7)
@@ -2773,7 +2773,7 @@
 		)
 		(fill
 			(type color)
-			(color 175 67 103 1)
+			(color 194 117 135 1)
 		)
 		(effects
 			(font

@@ -328,7 +328,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "0_Peripherals:Fiducial"
+		(symbol "0_Mechanical:Fiducial"
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
@@ -408,7 +408,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "0_Peripherals:MountingHole_Pad"
+		(symbol "0_Mechanical:MountingHole_Pad"
 			(pin_numbers
 				(hide yes)
 			)
@@ -515,7 +515,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Library:+3V3"
+		(symbol "power:+3V3"
 			(power)
 			(pin_numbers
 				(hide yes)
@@ -640,7 +640,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Library:GND"
+		(symbol "power:GND"
 			(power)
 			(pin_numbers
 				(hide yes)
@@ -3676,7 +3676,7 @@
 		(uuid "ed25a209-594d-47bf-8ff7-f3ae9a9982c9")
 	)
 	(symbol
-		(lib_id "0_Peripherals:MountingHole_Pad")
+		(lib_id "0_Mechanical:MountingHole_Pad")
 		(at 132.08 214.63 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3729,24 +3729,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" ""
-			(at 132.08 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" ""
-			(at 132.08 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "bbd592aa-f020-45a2-8c57-e753b818817d")
 		)
@@ -3760,7 +3742,7 @@
 		)
 	)
 	(symbol
-		(lib_id "0_Peripherals:Fiducial")
+		(lib_id "0_Mechanical:Fiducial")
 		(at 161.29 218.44 0)
 		(mirror y)
 		(unit 1)
@@ -3815,24 +3797,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" ""
-			(at 161.29 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" ""
-			(at 161.29 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(instances
 			(project "COMET1_CCT"
 				(path "/0650c7a8-acba-429c-9f8e-eec0baf0bc1c/fede4c36-00cc-4d3d-b71c-5243ba232202"
@@ -3843,7 +3807,7 @@
 		)
 	)
 	(symbol
-		(lib_id "0_Peripherals:MountingHole_Pad")
+		(lib_id "0_Mechanical:MountingHole_Pad")
 		(at 139.7 214.63 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3896,24 +3860,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" ""
-			(at 139.7 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" ""
-			(at 139.7 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "c018d925-daa9-42c5-9098-5ba1d02269f7")
 		)
@@ -3927,7 +3873,7 @@
 		)
 	)
 	(symbol
-		(lib_id "0_Peripherals:Fiducial")
+		(lib_id "0_Mechanical:Fiducial")
 		(at 161.29 210.82 0)
 		(mirror y)
 		(unit 1)
@@ -3982,24 +3928,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" ""
-			(at 161.29 210.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" ""
-			(at 161.29 210.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(instances
 			(project "COMET1_CCT"
 				(path "/0650c7a8-acba-429c-9f8e-eec0baf0bc1c/fede4c36-00cc-4d3d-b71c-5243ba232202"
@@ -4010,7 +3938,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:GND")
+		(lib_id "power:GND")
 		(at 261.62 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4075,7 +4003,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:GND")
+		(lib_id "power:GND")
 		(at 261.62 121.92 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4140,7 +4068,7 @@
 		)
 	)
 	(symbol
-		(lib_id "0_Peripherals:Fiducial")
+		(lib_id "0_Mechanical:Fiducial")
 		(at 161.29 214.63 0)
 		(mirror y)
 		(unit 1)
@@ -4195,24 +4123,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" ""
-			(at 161.29 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" ""
-			(at 161.29 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(instances
 			(project "COMET1_CCT"
 				(path "/0650c7a8-acba-429c-9f8e-eec0baf0bc1c/fede4c36-00cc-4d3d-b71c-5243ba232202"
@@ -4223,7 +4133,7 @@
 		)
 	)
 	(symbol
-		(lib_id "0_Peripherals:MountingHole_Pad")
+		(lib_id "0_Mechanical:MountingHole_Pad")
 		(at 116.84 214.63 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4276,24 +4186,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" ""
-			(at 116.84 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" ""
-			(at 116.84 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "287c92b0-bbfc-40ca-a135-e26521fca4de")
 		)
@@ -4307,7 +4199,7 @@
 		)
 	)
 	(symbol
-		(lib_id "0_Peripherals:MountingHole_Pad")
+		(lib_id "0_Mechanical:MountingHole_Pad")
 		(at 124.46 214.63 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4352,24 +4244,6 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 124.46 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Part Number" ""
-			(at 124.46 214.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" ""
 			(at 124.46 214.63 0)
 			(effects
 				(font
@@ -4447,24 +4321,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" "C5712177"
-			(at 264.16 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" "0.89"
-			(at 264.16 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "MPN" "DF11-10DS-2DSA"
 			(at 264.16 118.11 0)
 			(effects
@@ -4474,7 +4330,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Link" "https://uk.farnell.com/hirose-hrs/df11-10ds-2dsa-05/receptacle-2mm-10way/dp/1688320"
+		(property "Min Qty" "1"
 			(at 264.16 118.11 0)
 			(effects
 				(font
@@ -4483,7 +4339,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1688320"
+		(property "Order Code" "1688320"
 			(at 264.16 118.11 0)
 			(effects
 				(font
@@ -4492,7 +4348,25 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price" "1.4"
+		(property "Part Link" "https://uk.farnell.com/hirose-hrs/df11-10ds-2dsa-05/receptacle-2mm-10way/dp/1688320"
+			(at 264.16 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "1.4"
+			(at 264.16 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
 			(at 264.16 118.11 0)
 			(effects
 				(font
@@ -4541,7 +4415,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:+3V3")
+		(lib_id "power:+3V3")
 		(at 261.62 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4606,7 +4480,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:+3V3")
+		(lib_id "power:+3V3")
 		(at 261.62 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4726,24 +4600,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLC Part Number" "C5712177"
-			(at 264.16 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Price" "0.89"
-			(at 264.16 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "MPN" "DF11-10DS-2DSA"
 			(at 264.16 147.32 0)
 			(effects
@@ -4753,7 +4609,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Link" "https://uk.farnell.com/hirose-hrs/df11-10ds-2dsa-05/receptacle-2mm-10way/dp/1688320"
+		(property "Min Qty" "1"
 			(at 264.16 147.32 0)
 			(effects
 				(font
@@ -4762,7 +4618,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1688320"
+		(property "Order Code" "1688320"
 			(at 264.16 147.32 0)
 			(effects
 				(font
@@ -4771,7 +4627,25 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price" "1.4"
+		(property "Part Link" "https://uk.farnell.com/hirose-hrs/df11-10ds-2dsa-05/receptacle-2mm-10way/dp/1688320"
+			(at 264.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price Per" "1.4"
+			(at 264.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Farnell"
 			(at 264.16 147.32 0)
 			(effects
 				(font
