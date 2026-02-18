@@ -23,9 +23,7 @@ if (EXISTS ${picoVscode})
     include(${picoVscode})
 endif()
 # ====================================================================================
-set(PICO_BOARD pico2 CACHE STRING "Board type")
-
-# Pull in Raspberry Pi Pico SDK (must be before project)
+set(PICO_SDK_PATH "$ENV{HOME}/.pico-sdk/sdk/latest")
 include(pico_sdk_import.cmake)
 
 project(RS_MASTER_NEW C CXX ASM)
@@ -58,10 +56,14 @@ target_include_directories(RS_MASTER_NEW PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}/src
 )
 
+add_subdirectory("libs/pico_rc" pico_rc)
+
 # Add any user requested libraries
 target_link_libraries(RS_MASTER_NEW 
         hardware_spi
         hardware_i2c
+        pico_stdlib
+        pico_rc
         )
 
 pico_add_extra_outputs(RS_MASTER_NEW)
