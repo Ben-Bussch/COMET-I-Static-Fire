@@ -1,7 +1,7 @@
 #pragma once
 
-void SetupControl(int PyroPin, int FirePin, int FillSequPin);
+unsigned short SetupControl(int PyroPin, int FirePin, int FillSequPin);
 void Rest();
-unsigned long fillSequence(unsigned long FillStartTime, unsigned long clk_time, int fillSeq);
-unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, int FireSeq, int PyroPin);
-unsigned long abortsequence(unsigned long AbortStartTime, unsigned long clk_time, int PyroPin);
+unsigned short fillSequence(/*unsigned long FillStartTime, unsigned long clk_time*/ unsigned long filltime, int fillSeq);
+unsigned short fireSequence(/*unsigned long FireStartTime, unsigned long clk_time*/ unsigned long countdown, int* FireSeq, int PyroPin);
+unsigned short abortsequence(/*unsigned long AbortStartTime, unsigned long clk_time*/ unsigned long countdown, int PyroPin);

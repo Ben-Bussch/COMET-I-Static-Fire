@@ -33,6 +33,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 file(GLOB SRC_FILES src/*.cpp)
+file(GLOB SRC_FILES src/*.c)
 
 add_executable(RS_MASTER_NEW ${SRC_FILES})
 
