@@ -68,7 +68,7 @@ unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, 
   }
 
 
-  if(countdown  >= 6000 && FireSeq == 1){
+  if(countdown  >= 8000 && FireSeq == 1){
     digitalWrite(PyroPin, HIGH);
     FireSeq = 2; 
   }
