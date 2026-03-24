@@ -67,7 +67,7 @@ void setup() {
 
     pinMode(RS_DE_RE_SLAVE, OUTPUT);
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // default receive
-    sendString(String("RS485 Slave ready."));
+    sendString(String("RS485 Slave ready.\n"));
 
     //Serial2.flush();
     String PT_setup = SetupCurrentSensor();
@@ -75,19 +75,19 @@ void setup() {
 
     //Inputs and Outputs
     SetupControl(PyroPin, FirePin, FillSequPin);
-    
+
 }
 
 
 void loop() {
-    
+
   clk_time = millis();
 
   if(clk_time - lastSensorReadTime - SENSOR_READ_INTERVAL_MS >= 0){
    lastSensorReadTime  = clk_time;
-   Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
-   IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
-   //sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3)+","+String(clk_time));
+   Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line
+   IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line
+   sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3)+","+String(clk_time)+"\n");
 
   }
 
@@ -98,15 +98,13 @@ void loop() {
     fillSeq = 0;
     FillStartTime = clk_time;
 
-
     if(lastdisplay > clk_time ){
       lastdisplay = clk_time;
     }
-    if(int (clk_time - lastdisplay) - DISPLAY_INTERVAL_MS  >= 0){
-      lastdisplay = clk_time; 
-      sendString(String("Mode: REST "));
+    if((int)(clk_time - lastdisplay) - DISPLAY_INTERVAL_MS  >= 0){
+      lastdisplay = clk_time;
+      sendString(String("Mode: REST \n"));
     }
-
   }
 
   //Fill mode, fire is low and fill is high
@@ -114,20 +112,18 @@ void loop() {
       fireSeq = 0;
       filltime = fillSequence(FillStartTime, clk_time, fillSeq);
 
-      if(lastdisplay > filltime ){
+    if(lastdisplay > filltime ){
         lastdisplay = filltime;
-      }
-      if(int (filltime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0){
-        lastdisplay = filltime; 
+    }
+    if((int)(filltime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0){
+        lastdisplay = filltime;
         int ft = filltime/1000;
 
-        sendString(String("Mode: FILL"));
-        sendString(String("Fill Time: ")+ String(ft)+String(" s"));
-
+        sendString(String("Mode: FILL\n"));
+        sendString(String("Fill Time: ")+ String(ft)+String(" s\n\n"));
     }
-    
   }
-  
+
 
   // Pyro safety when fire is low
   if (digitalRead(FirePin) == LOW){
@@ -137,23 +133,23 @@ void loop() {
     AbortStartTime = clk_time;
   }
 
-  
+
   // Launch mode when fire is high and fill is high
-  if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == HIGH){   
+  if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == HIGH){
     fillSeq = 0; //get out of fill sequence
 
 
-    launchtime = fireSequence(FireStartTime, clk_time, fireSeq, PyroPin);
-    
+    launchtime = fireSequence(FireStartTime, clk_time, *fireSeq, PyroPin);
+
     if(lastdisplay > launchtime){
       lastdisplay = launchtime;
     }
-    if(int (launchtime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0 ){
-        lastdisplay = launchtime; 
+    if((int)(launchtime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0 ){
+        lastdisplay = launchtime;
         int lt = launchtime/1000 -10;
-        sendString(String("Mode: FIRE"));
-        sendString(String("Launch Time: ")+ String(lt) +String(" s"));
-        
+        sendString(String("Mode: FIRE\n"));
+        sendString(String("Launch Time: ")+ String(lt) +String(" s\n\n"));
+
     }
     AbortStartTime = clk_time;
     FillStartTime = clk_time;
@@ -161,9 +157,9 @@ void loop() {
 
   // Abort mode when fire is high and fill is lows
   if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == LOW){
-    fillSeq = 0; 
+    fillSeq = 0;
     fireSeq = 0;
- 
+
     aborttime  = abortsequence(AbortStartTime, clk_time, PyroPin);
 
     if(lastdisplay > aborttime ){
@@ -173,10 +169,10 @@ void loop() {
     if (int(aborttime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0){
       lastdisplay = aborttime;
       int at = aborttime/1000 -3;
-      sendString(String("Mode: ABORT"));
+      sendString(String("Mode: ABORT\n"));
 
        if (at <= 0){
-        sendString(String("ABORT IN: ")+ String(at) +String(" s"));
+           sendString(String("ABORT IN: ")+ String(at) +String(" s\n\n"));
 
        }
     }
@@ -185,6 +181,4 @@ void loop() {
     FillStartTime = clk_time;
 
   }
-}     
-          
-              
+}

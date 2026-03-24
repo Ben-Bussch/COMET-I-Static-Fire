@@ -1,7 +1,8 @@
-#include "pressure_functions.h"
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
+#include "pressure_functions.h"
 #include <string.h>
+#include <stdint.h>
 
 #define INA219_INTERCEPT -23.76
 #define INA219_GRADIENT 5.75
