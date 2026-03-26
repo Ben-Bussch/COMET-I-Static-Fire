@@ -18,12 +18,13 @@ timestamps = deque(maxlen=1000)
 
 
 plt.ion()  # interactive mode
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(1, 1)
 line1, = ax.plot([], [], label='P_N2O')
 line2, = ax.plot([], [], label='P_IPA')
 ax.set_xlabel("Time")
 ax.set_ylabel("Pressure")
 ax.legend()
+plt.show()
 
 t_fill_exp = 900 #s
 
@@ -121,7 +122,14 @@ def readserial(comport, baudrate, timestamp=False):
                         # --- THEN update plot ---
                         line1.set_data(timestamps, p_o_vals)
                         line2.set_data(timestamps, p_i_vals)
-                    except:
+
+                        ax.relim()
+                        ax.autoscale_view()
+
+                        plt.draw()
+                        plt.pause(0.01)
+                    except Exception as e:
+                        print("Error:", e)
                         plt.pause(0.01)
                     """
                     if len(timestamps) % 50 == 0:
@@ -137,4 +145,4 @@ def readserial(comport, baudrate, timestamp=False):
 
 if __name__ == '__main__':
 
-    readserial('COM5', 9600, timestamp=True)
+    readserial('/dev/ttyACM0', 9600, timestamp=True)
