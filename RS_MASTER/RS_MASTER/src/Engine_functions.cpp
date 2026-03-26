@@ -24,7 +24,7 @@ int FilldeltaPPM = 750;
 int PPMpos = 0; 
 int count = 0;
 
-unsigned long pyro_start_time = 8000; //4000 for early pyro, 8800 for later pyro
+unsigned long pyro_start_time = 8800; //4000 for early pyro, 8800 for later pyro
 
 void SetupControl(int PyroPin, int FirePin, int FillSequPin){
   //Servos
