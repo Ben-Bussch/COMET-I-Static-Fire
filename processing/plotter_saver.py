@@ -57,17 +57,28 @@ def readserial(comport, baudrate, timestamp=False):
             
                 # --- Handle metadata lines ---
                 if data.startswith("Mode:"):
-                    mode = data.split(":")[1].strip()
-                    if launch_time and launch_time == "STANDBY":
+                    try:
+                        mode = data.split(":")[1].strip()
+                    except ValueError:
+                        mode = None
+                    
+                    if launch_time == "STANDBY" or not launch_time:
                         print("Mode:", mode)
             
                 elif data.startswith("Launch Time:"):
-                    launch_time = data.split(":")[1].strip()
+                    try:
+                        launch_time = int(data.split(":")[1].strip().split()[0])
+                    except ValueError:
+                        launch_time = None
+                    
                     fill_time = "STANDBY"
                     print("Launch time:", launch_time)
             
                 elif data.startswith("Fill Time:"):
-                    fill_time = data.split(":")[1].strip()
+                    try:
+                        fill_time = int(data.split(":")[1].strip().split()[0])
+                    except ValueError:
+                        fill_time = None
                     launch_time = "STANDBY"
                     print("Fill time:",fill_time, " / 900")
             
@@ -82,27 +93,27 @@ def readserial(comport, baudrate, timestamp=False):
                             if ':' in item:
                                 key, val = item.split(':', 1)
                                 values[key.strip()] = val.strip()
-                                
-                    csv_writer.writerow([
-                        timestamp,
-                        values.get('t'),
-                        mode,
-                        launch_time,
-                        fill_time,
-                        values.get('P_o'),
-                        values.get('P_i')
-                    ])
-                                
-                    csvfile.flush()  # safer logging
+                    
                     p_o = float(values.get('P_o', 0))
                     p_i = float(values.get('P_i', 0))
                     t = float(values.get('t', 0))
+                    csv_writer.writerow([
+                        timestamp,
+                        t,
+                        mode,
+                        launch_time,
+                        fill_time,
+                        p_o,
+                        p_i
+                    ])
+                                
+                    csvfile.flush()  # safer logging
+
                     
                     p_o_vals.append(p_o)
                     p_i_vals.append(p_i)
                     timestamps.append(t/1000)
-                       
-
+                    
                     # --- THEN update plot ---
                     line1.set_data(timestamps, p_o_vals)
                     line2.set_data(timestamps, p_i_vals)
