@@ -15,9 +15,13 @@ String SetupCurrentSensor()
 {
     String status;
     
-    if (!ina219A.begin() || !ina219B.begin() ) {
+    if (!ina219A.begin()) {
         status = "Failed to find INA219 chip";
-    } else {
+    } else if (!ina219B.begin())
+    {
+        status = "Failed to find INA219 chip";
+    }
+    else {
         ina219A.setCalibration_32V_1A();
         ina219B.setCalibration_32V_1A();
         status = "Successfully connected to both INA219 chip";

@@ -24,6 +24,8 @@ int FilldeltaPPM = 750;
 int PPMpos = 0; 
 int count = 0;
 
+unsigned long pyro_start_time = 8000;
+
 void SetupControl(int PyroPin, int FirePin, int FillSequPin){
   //Servos
   NoxEngServo.attach(NoxEngPin);
@@ -58,28 +60,24 @@ unsigned long fillSequence(unsigned long FillStartTime, unsigned long clk_time, 
 }
 
 
-unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, int FireSeq, int PyroPin)
+unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, int PyroPin)
 {
   unsigned long countdown =  clk_time - FireStartTime; //starts from zero to avoid negative long issues
 
-  if(FireSeq == 0 && countdown >= 100 ){
-      FillServo.writeMicroseconds(FillStartPPM);
-      FireSeq = 1;
-  }
-
-
-  if(countdown  >= 8000 && FireSeq == 1){
-    digitalWrite(PyroPin, HIGH);
-    FireSeq = 2; 
-  }
-
-  if(countdown  >= 10000 && FireSeq == 2){
-    NoxEngServo.writeMicroseconds(NoxEngStartPPM+NoxdeltaPPM); 
-    FireSeq = 3; 
-  }
- if(countdown >= 10100 && FireSeq == 3){
+  if(countdown >= 10100 ){
     IPAEngServo.writeMicroseconds(IPAEngStartPPM+IPAdeltaPPM);
-    FireSeq = 4; 
+  }
+
+  else if(countdown  >= 10000){
+    NoxEngServo.writeMicroseconds(NoxEngStartPPM+NoxdeltaPPM);  
+  }
+
+  else if(countdown  >= pyro_start_time && (pyro_start_time+1000) >= countdown){
+    digitalWrite(PyroPin, HIGH);
+  }
+
+  else if(countdown >= 100 ){
+      FillServo.writeMicroseconds(FillStartPPM);
   }
 
   return countdown;

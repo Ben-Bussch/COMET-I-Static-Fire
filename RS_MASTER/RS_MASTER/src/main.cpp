@@ -7,7 +7,7 @@
 
 const int RS_DE_RE_SLAVE = 10;
 unsigned long lastSensorReadTime = 0;
-const int SENSOR_READ_INTERVAL_MS = 100;
+const int SENSOR_READ_INTERVAL_MS = 1000;
 
 unsigned long lastdisplay  = 0;
 int DISPLAY_INTERVAL_MS  = 1000;
@@ -23,7 +23,6 @@ int PyroPin = 21;
 int FillSequPin = 36;
 int FirePin = 34;
 
-int fireSeq = 0;
 int fillSeq = 0;
 
 unsigned long clk_time = 0;
@@ -67,7 +66,7 @@ void setup() {
 
     pinMode(RS_DE_RE_SLAVE, OUTPUT);
     digitalWrite(RS_DE_RE_SLAVE, LOW);   // default receive
-    sendString(String("RS485 Slave ready."));
+    sendString(String("RS485 Slave ready.\n"));
 
     //Serial2.flush();
     String PT_setup = SetupCurrentSensor();
@@ -83,11 +82,11 @@ void loop() {
     
   clk_time = millis();
 
-  if(clk_time - lastSensorReadTime - SENSOR_READ_INTERVAL_MS >= 0){
+  if(clk_time - lastSensorReadTime >= SENSOR_READ_INTERVAL_MS){
    lastSensorReadTime  = clk_time;
    Nox_pressure = ReadPressureTransducer(1); //1 is Nox, 2 is IPA line 
    IPA_pressure = ReadPressureTransducer(2); //1 is Nox, 2 is IPA line 
-   sendString(String(Nox_pressure,3) + ","+String(IPA_pressure,3)+","+String(clk_time));
+   sendString(String("P_o:")+String(Nox_pressure,3) + ","+String("P_i:")+String(IPA_pressure,3)+","+String("t:")+String(clk_time)+"\n");
 
   }
 
@@ -104,14 +103,13 @@ void loop() {
     }
     if(int (clk_time - lastdisplay) - DISPLAY_INTERVAL_MS  >= 0){
       lastdisplay = clk_time; 
-      sendString(String("Mode: REST "));
+      sendString(String("Mode: REST \n"));
     }
 
   }
 
   //Fill mode, fire is low and fill is high
   if (digitalRead(FillSequPin) == HIGH && digitalRead(FirePin) == LOW){
-      fireSeq = 0;
       filltime = fillSequence(FillStartTime, clk_time, fillSeq);
 
       if(lastdisplay > filltime ){
@@ -121,8 +119,8 @@ void loop() {
         lastdisplay = filltime; 
         int ft = filltime/1000;
 
-        sendString(String("Mode: FILL"));
-        sendString(String("Fill Time: ")+ String(ft)+String(" s"));
+        sendString(String("Mode: FILL \n"));
+        sendString(String("Fill Time: ")+ String(ft)+String(" s \n"));
 
     }
     
@@ -132,7 +130,7 @@ void loop() {
   // Pyro safety when fire is low
   if (digitalRead(FirePin) == LOW){
     digitalWrite(PyroPin, LOW);
-    fireSeq = 0;
+
     FireStartTime = clk_time;
     AbortStartTime = clk_time;
   }
@@ -143,7 +141,7 @@ void loop() {
     fillSeq = 0; //get out of fill sequence
 
 
-    launchtime = fireSequence(FireStartTime, clk_time, fireSeq, PyroPin);
+    launchtime = fireSequence(FireStartTime, clk_time, PyroPin);
     
     if(lastdisplay > launchtime){
       lastdisplay = launchtime;
@@ -151,8 +149,8 @@ void loop() {
     if(int (launchtime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0 ){
         lastdisplay = launchtime; 
         int lt = launchtime/1000 -10;
-        sendString(String("Mode: FIRE"));
-        sendString(String("Launch Time: ")+ String(lt) +String(" s"));
+        sendString(String("Mode: FIRE \n"));
+        sendString(String("Launch Time: ")+ String(lt) +String(" s \n"));
         
     }
     AbortStartTime = clk_time;
@@ -162,7 +160,6 @@ void loop() {
   // Abort mode when fire is high and fill is lows
   if (digitalRead(FirePin) == HIGH && digitalRead(FillSequPin) == LOW){
     fillSeq = 0; 
-    fireSeq = 0;
  
     aborttime  = abortsequence(AbortStartTime, clk_time, PyroPin);
 
@@ -173,7 +170,7 @@ void loop() {
     if (int(aborttime - lastdisplay) - DISPLAY_INTERVAL_MS >= 0){
       lastdisplay = aborttime;
       int at = aborttime/1000 -3;
-      sendString(String("Mode: ABORT"));
+      sendString(String("Mode: ABORT \n"));
 
        if (at <= 0){
         sendString(String("ABORT IN: ")+ String(at) +String(" s"));
