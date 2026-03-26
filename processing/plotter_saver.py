@@ -11,21 +11,34 @@ from datetime import datetime
 import csv
 import matplotlib.pyplot as plt
 from collections import deque
+import numpy as np
 
 p_o_vals = deque(maxlen=1000)
 p_i_vals = deque(maxlen=1000)
 timestamps = deque(maxlen=1000)
 
 
-plt.ion()  # interactive mode
-fig, ax = plt.subplots(1, 1)
-line1, = ax.plot([], [], label='P_N2O')
-line2, = ax.plot([], [], label='P_IPA')
-ax.set_xlabel("Time")
-ax.set_ylabel("Pressure")
-ax.legend()
-ax.grid()
-plt.show()
+plt.ion()
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 6), sharex=True)
+# --- Raw data plot ---
+line1, = ax1.plot([], [], label='P_N2O', color='blue')
+line2, = ax1.plot([], [], label='P_IPA', color='red')
+ax1.set_ylabel("Pressure [bar]")
+ax1.set_xlim(0, 50)
+ax1.legend()
+ax1.grid(True)
+
+# --- Moving average plot ---
+ma_window = 10  # number of points for moving average
+line1_ma, = ax2.plot([], [], label='P_N2O MA', color='blue')
+line2_ma, = ax2.plot([], [], label='P_IPA MA', color='red')
+ax2.set_xlabel("Time [s]")
+ax2.set_ylabel("Pressure MA [bar]")
+ax2.set_xlim(0, 50)
+ax2.legend()
+ax2.grid(True)
+
+plt.show(block=False)
 
 t_fill_exp = 900 #s
 
@@ -52,6 +65,7 @@ def readserial(comport, baudrate, timestamp=False):
         mode = None
         launch_time = None
         fill_time = None
+        t_max = 0
         try:
             while True:
                 data = ser.readline().decode().strip()
@@ -125,21 +139,42 @@ def readserial(comport, baudrate, timestamp=False):
                         ])
                                     
                         csvfile.flush()  # safer logging
-    
                         
                         p_o_vals.append(p_o)
                         p_i_vals.append(p_i)
                         timestamps.append(t/1000)
                         
-                        # --- THEN update plot ---
-                        line1.set_data(timestamps, p_o_vals)
-                        line2.set_data(timestamps, p_i_vals)
+                        # --- Raw data ---
+                        line1.set_data(list(timestamps), list(p_o_vals))
+                        line2.set_data(list(timestamps), list(p_i_vals))
 
-                        ax.relim()
-                        ax.autoscale_view()
+                        # --- Moving average ---
+                        if len(p_o_vals) >= ma_window:
+                            weights = np.arange(1, ma_window + 1)
+                            p_o_ma = np.convolve(p_o_vals, np.ones(ma_window)/ma_window, mode='valid')
+                            p_i_ma = np.convolve(p_i_vals, np.ones(ma_window)/ma_window, mode='valid')
+                            t_ma = list(timestamps)[ma_window-1:]  # align timestamps with MA
+                            line1_ma.set_data(t_ma, p_o_ma)
+                            line2_ma.set_data(t_ma, p_i_ma)
+
+                        # --- Update x-axis window (scrolling 50s) ---
+                        window_size = 50
+                        if len(timestamps) > 1:
+                            current_time = timestamps[-1]
+                            window_start = (current_time // window_size) * window_size 
+                            window_end = window_start + window_size 
+                            ax1.set_xlim(window_start, window_end)
+                            ax2.set_xlim(window_start, window_end)
+
+                        # --- Autoscale y-axis ---
+                        ax1.relim()
+                        ax1.autoscale_view(scalex=False, scaley=True)
+                        ax2.relim()
+                        ax2.autoscale_view(scalex=False, scaley=True)
 
                         plt.draw()
                         plt.pause(0.01)
+
                     except Exception as e:
                         print("Error:", e)
                         plt.pause(0.01)
