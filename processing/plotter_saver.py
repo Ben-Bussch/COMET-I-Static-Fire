@@ -25,6 +25,8 @@ ax.set_xlabel("Time")
 ax.set_ylabel("Pressure")
 ax.legend()
 
+t_fill_exp = 900 #s
+
 def generate_output_filename():
     now = datetime.now()
     # Create a datetime string suitable for a filename, e.g., "output_20230405_123456.csv"
@@ -43,7 +45,7 @@ def readserial(comport, baudrate, timestamp=False):
         csv_writer = csv.writer(csvfile)
         # Write header once
         # Write header
-        csv_writer.writerow(['Timestamp', 't', 'Mode', 'Launch_Time', 'Fill_Time', 'P_o', 'P_i'])
+        csv_writer.writerow(['Timestamp', 't [ms]', 'Mode', 'Launch_Time [s]', 'Fill_Time [s]', 'P_o [Bar]', 'P_i [Bar]'])
         
         mode = None
         launch_time = None
@@ -80,50 +82,54 @@ def readserial(comport, baudrate, timestamp=False):
                     except ValueError:
                         fill_time = None
                     launch_time = "STANDBY"
-                    print("Fill time:",fill_time, " / 900")
+                    print("Fill time:",fill_time, " / ", t_fill_exp, " s")
             
                 # --- Handle main data line ---
                 elif "P_o" in data:
                     now = datetime.now()
                     timestamp = now.strftime('%H:%M:%S') + '.{:04d}'.format(int(now.microsecond / 1000))
-            
-                    values = {}
-                    for item in data.split(','):
+                    
+                    try:
+                        values = {}
                         for item in data.split(','):
-                            if ':' in item:
-                                key, val = item.split(':', 1)
-                                values[key.strip()] = val.strip()
-                    
-                    p_o = float(values.get('P_o', 0))
-                    p_i = float(values.get('P_i', 0))
-                    t = float(values.get('t', 0))
-                    csv_writer.writerow([
-                        timestamp,
-                        t,
-                        mode,
-                        launch_time,
-                        fill_time,
-                        p_o,
-                        p_i
-                    ])
-                                
-                    csvfile.flush()  # safer logging
-
-                    
-                    p_o_vals.append(p_o)
-                    p_i_vals.append(p_i)
-                    timestamps.append(t/1000)
-                    
-                    # --- THEN update plot ---
-                    line1.set_data(timestamps, p_o_vals)
-                    line2.set_data(timestamps, p_i_vals)
-                    
+                            for item in data.split(','):
+                                if ':' in item:
+                                    key, val = item.split(':', 1)
+                                    values[key.strip()] = val.strip()
+                        
+                        
+                        p_o = float(values.get('P_o', 0))
+                        p_i = float(values.get('P_i', 0))
+                        t = float(values.get('t', 0))
+                        csv_writer.writerow([
+                            timestamp,
+                            t,
+                            mode,
+                            launch_time,
+                            fill_time,
+                            p_o,
+                            p_i
+                        ])
+                                    
+                        csvfile.flush()  # safer logging
+    
+                        
+                        p_o_vals.append(p_o)
+                        p_i_vals.append(p_i)
+                        timestamps.append(t/1000)
+                        
+                        # --- THEN update plot ---
+                        line1.set_data(timestamps, p_o_vals)
+                        line2.set_data(timestamps, p_i_vals)
+                    except:
+                        plt.pause(0.01)
+                    """
                     if len(timestamps) % 50 == 0:
                         ax.relim()
                         ax.autoscale_view()
                     plt.draw()
                     plt.pause(0.01)
-        
+                    """
         except KeyboardInterrupt:
             ser.close()
             print("Serial reading stopped by user. (Ctrl-c in terminal)")
@@ -131,4 +137,4 @@ def readserial(comport, baudrate, timestamp=False):
 
 if __name__ == '__main__':
 
-    readserial('COM9', 9600, timestamp=True)
+    readserial('COM5', 9600, timestamp=True)
