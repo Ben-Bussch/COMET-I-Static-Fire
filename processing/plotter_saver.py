@@ -24,6 +24,7 @@ line2, = ax.plot([], [], label='P_IPA')
 ax.set_xlabel("Time")
 ax.set_ylabel("Pressure")
 ax.legend()
+ax.grid()
 plt.show()
 
 t_fill_exp = 900 #s
@@ -67,6 +68,17 @@ def readserial(comport, baudrate, timestamp=False):
                     
                     if launch_time == "STANDBY" or not launch_time:
                         print("Mode:", mode)
+                    elif mode == "ABORT":
+                        print("Mode: ", mode)
+                
+                elif data.startswith("ABORT IN:"):
+                    try:
+                        launch_time = int(data.split(":")[1].strip().split()[0])
+                    except ValueError:
+                        launch_time = None
+                    
+                    fill_time = "STANDBY"
+                    print("ABORT IN:", launch_time)
             
                 elif data.startswith("Launch Time:"):
                     try:
