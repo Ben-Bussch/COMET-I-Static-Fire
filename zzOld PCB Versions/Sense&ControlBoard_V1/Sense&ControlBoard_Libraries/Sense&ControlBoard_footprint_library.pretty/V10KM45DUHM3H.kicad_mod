@@ -1,0 +1,424 @@
+(footprint "V10KM45DUHM3H"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "V10KM45DUHM3/H-1")
+	(tags "Schottky Diode")
+	(property "Reference" "REF**"
+		(at 0.08 -6.19 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "18b0d562-ef66-44eb-8eb4-943c1fb2b43b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "V10KL45DU-M3_H"
+		(at 0 0.357 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f6bf955e-b68c-44ba-a2e9-5239e68ed61b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.vishay.com/docs/87422/v10kl45du.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2143b020-c845-4aab-b4a0-d3df021177ee")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "VISHAY - V10KL45DU-M3/H - SCHOTTKY RECTIFIER, DUAL, 45V, FLATPAK"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ea83acb0-95f4-416c-8e1f-4ad87c5aa2c7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aacfe412-792e-4909-b59f-733076ceb218")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Vishay"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2fa90575-89a7-4a0a-8b26-3e8e61ee9906")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "V10KL45DU-M3/H"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db5bb8d3-01b1-44d6-bb8f-db14ad15e99a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "78-V10KL45DU-M3/H"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7be2d0d2-b6cb-4ed2-a387-a57943c87825")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/V10KL45DU-M3-H?qs=u16ybLDytRYW8DIJQEC1ZA%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "becc3c4e-7f57-4100-8b19-24cdf3d844ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" "V10KL45DU-M3/H"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9dcdcc9c-fd4d-46c3-b7b9-6f9f3e915ea6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" "https://www.arrow.com/en/products/v10kl45du-m3h/vishay"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eb9d765b-049d-4935-8c81-1b406170ac0d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "V10KL45DU-M3/H"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "692cceea-04ac-4462-ba4c-8591139d5ae2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Link" "https://uk.farnell.com/vishay/v10kl45du-m3-h/schottky-rectifier-dual-45v-flatpak/dp/2989347"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4f3bdac3-0b69-4b60-898e-038625006813")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" "Farnell"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bd1796cf-3187-452d-ab1f-52c186d48974")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.45 2)
+		(end -2.45 2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f3721ab6-f6bd-439f-a948-73dcb90c0076")
+	)
+	(fp_line
+		(start -2 3.8)
+		(end -2 3.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0c655c4f-dea6-4549-ad69-64130e6cac43")
+	)
+	(fp_line
+		(start -1.8 3.8)
+		(end -1.8 3.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "61a95fd5-922b-475c-b21d-855c40b13786")
+	)
+	(fp_line
+		(start 2.45 2)
+		(end 2.45 2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "647ff37a-1f95-40ce-bfc2-21609444a7fc")
+	)
+	(fp_arc
+		(start -2 3.8)
+		(mid -1.9 3.7)
+		(end -1.8 3.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e78f4e38-d0c8-4682-9fee-98fd12b7184f")
+	)
+	(fp_arc
+		(start -1.8 3.8)
+		(mid -1.9 3.9)
+		(end -2 3.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "84e41ef0-848a-424e-b870-0167ca76bf61")
+	)
+	(fp_line
+		(start -3.275 -3.685)
+		(end 3.275 -3.685)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "450b7b95-9b40-4a51-abbd-577f4e6d8413")
+	)
+	(fp_line
+		(start -3.275 4.4)
+		(end -3.275 -3.685)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "56426696-1e63-4f26-ac53-b014be10e99d")
+	)
+	(fp_line
+		(start 3.275 -3.685)
+		(end 3.275 4.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8daff52e-f18f-490f-93c6-2238d2e908f6")
+	)
+	(fp_line
+		(start 3.275 4.4)
+		(end -3.275 4.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "cc3aaab5-d69e-42cc-8c1d-acf52040f95b")
+	)
+	(fp_line
+		(start -2.45 -2.95)
+		(end 2.45 -2.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f31ca9eb-4ab4-43e6-9142-30c50988f19b")
+	)
+	(fp_line
+		(start -2.45 2.95)
+		(end -2.45 -2.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c3112f6c-3178-41e9-9023-5688874ad919")
+	)
+	(fp_line
+		(start 2.45 -2.95)
+		(end 2.45 2.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7322d3f0-0714-4909-bbc6-ecfad074fa77")
+	)
+	(fp_line
+		(start 2.45 2.95)
+		(end -2.45 2.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3b19cd6d-1ce3-48e6-b484-669813535b21")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.357 0)
+		(layer "F.Fab")
+		(uuid "bae1c235-94b0-4e87-8242-e6811d3606ed")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.905 2.905)
+		(size 0.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "deb0a545-9496-428c-b954-42d0d30e1c00")
+	)
+	(pad "2" smd rect
+		(at -0.635 2.905)
+		(size 0.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f79b3d8a-b6f5-4ab4-8fe4-3de10dd33d29")
+	)
+	(pad "3" smd rect
+		(at 0.635 2.905)
+		(size 0.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1dbc56ca-041d-4a93-83e6-e4833c5a3384")
+	)
+	(pad "4" smd rect
+		(at 1.905 2.905)
+		(size 0.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bb448e80-7161-4cb5-ac4b-e75cf4b0959a")
+	)
+	(pad "5" smd rect
+		(at 1.905 -2.905 90)
+		(size 0.56 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fa6bee24-5bbc-4153-8099-1f0e827d03b1")
+	)
+	(pad "6" smd rect
+		(at 0.635 -2.905 90)
+		(size 0.56 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "01ae9c03-3914-4515-81bf-828a294390de")
+	)
+	(pad "6" smd rect
+		(at 1.24 -1.185)
+		(size 2.08 2.88)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fd32af81-70ac-42f7-b915-06693bad907e")
+	)
+	(pad "6" smd rect
+		(at 1.488 0.955 90)
+		(size 1.4 2.575)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ea0146fc-58fe-4a52-acc0-d3d50636bda5")
+	)
+	(pad "7" smd rect
+		(at -1.488 0.955 90)
+		(size 1.4 2.575)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e4733877-ed8d-41fc-8c00-7e1818c13d4f")
+	)
+	(pad "7" smd rect
+		(at -1.24 -1.185)
+		(size 2.08 2.88)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a496cb93-26b9-461b-9eda-622ffaca47ee")
+	)
+	(pad "7" smd rect
+		(at -0.635 -2.905 90)
+		(size 0.56 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ed81eaed-b6dd-4b56-8228-5aa01ae48560")
+	)
+	(pad "8" smd rect
+		(at -1.905 -2.905 90)
+		(size 0.56 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1aea4942-38dc-4026-af93-642dbed0bef2")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Sense&ControlBoard_Libraries/packages3D/FLATPAK_5X6_VIS.step"
+		(offset
+			(xyz 0 -0.1 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -90)
+		)
+	)
+)

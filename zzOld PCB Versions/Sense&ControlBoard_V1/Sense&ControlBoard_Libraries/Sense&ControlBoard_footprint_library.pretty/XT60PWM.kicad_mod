@@ -1,0 +1,444 @@
+(footprint "XT60PWM"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "XT60PW-M-2")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 3.6 -7.162 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "7f5d67de-db4c-4a85-8c87-18b7798017d4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "XT60PW-M"
+		(at 3.6 -7.162 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e51e020c-90e4-4340-adc8-428b59b202a3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.farnell.com/datasheets/3979982.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "65fd0827-b747-4cd8-bb01-07348343a5b9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Connector: DC supply; socket; XT60; male; PIN: 2; on PCBs; THT; 30A"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b09b975b-733c-467b-b695-c4cc496ac0c8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "8.4"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "23999b61-4e4f-4732-abcf-4b273afc97ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Amass"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0bbebe5f-a020-42e4-94da-605ae5e52675")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "XT60PW-M"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8e56584f-d54d-41c5-9a5b-139e27591523")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2a92dd2d-10ca-4369-b674-80f3d0f87c03")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a6e8c10c-18aa-4332-8a22-d02eabb6cba9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7e008735-ed99-4d4f-910f-30c9aab6086e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a265bcef-8754-4399-a403-09acff747a51")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "MP011776"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7f10c9c0-ce0f-4ef6-b0ff-b04fe69c2088")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Link" "https://uk.farnell.com/multicomp-pro/mp011776/rect-pwr-conn-r-a-plug-2pos-pcb/dp/4220303"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a8563553-8216-478a-a705-2a29f210dd0e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" "Farnell"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b1ef0b3b-3e9d-4f90-98a7-a58b1917ec15")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -4.15 -16.35)
+		(end 11.35 -16.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e06fb952-3dd6-4d4e-8819-cda5086a0fee")
+	)
+	(fp_line
+		(start -4.15 -7.5)
+		(end -4.15 -16.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7e61572d-1ab7-40c8-abb1-fbdc9895209b")
+	)
+	(fp_line
+		(start -4.15 -4.5)
+		(end -4.15 1.85)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ce7254dc-9e03-469c-853c-59f9829f7118")
+	)
+	(fp_line
+		(start -4.15 1.85)
+		(end -2.9 1.85)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "627e8a86-5716-44a7-a5e0-4c17f3564aa4")
+	)
+	(fp_line
+		(start 0 2.4)
+		(end 0 2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "78db231a-c94d-42e4-946f-b0430ce1b6a5")
+	)
+	(fp_line
+		(start 0 2.5)
+		(end 0 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "231a2300-d8ae-489f-b985-35dce4a60d88")
+	)
+	(fp_line
+		(start 5.1 1.85)
+		(end 2.6 1.85)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "49a7cf96-a8ef-468f-9459-64353bb9a40e")
+	)
+	(fp_line
+		(start 11.35 -16.35)
+		(end 11.35 -7.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ac424e73-6b4b-44c8-a9df-0d789bc597a6")
+	)
+	(fp_line
+		(start 11.35 -4.5)
+		(end 11.35 1.85)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "305d01be-a054-4dc6-867c-ec6ab628b63c")
+	)
+	(fp_line
+		(start 11.35 1.85)
+		(end 9.1 1.85)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "07139d01-2e44-4b76-be99-8032453dff05")
+	)
+	(fp_arc
+		(start 0 2.4)
+		(mid 0.05 2.45)
+		(end 0 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3208faa9-79d0-4fd2-8da5-e6f0a8812d02")
+	)
+	(fp_arc
+		(start 0 2.5)
+		(mid -0.05 2.45)
+		(end 0 2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "93f27f7f-04e7-4ac8-a402-05b93fc9ab7a")
+	)
+	(fp_line
+		(start -5.5 -17.35)
+		(end 12.7 -17.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5f31846d-54c8-4895-9ec3-75d1f6e0fb53")
+	)
+	(fp_line
+		(start -5.5 3.025)
+		(end -5.5 -17.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5d84b985-65c2-4cea-bb8c-052d6b754fa7")
+	)
+	(fp_line
+		(start 12.7 -17.35)
+		(end 12.7 3.025)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b8ccfcde-a395-41fe-bfe5-b45d1eef0c88")
+	)
+	(fp_line
+		(start 12.7 3.025)
+		(end -5.5 3.025)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e2d661f3-462f-412c-9a15-7a320ed4bfcb")
+	)
+	(fp_line
+		(start -4.15 -16.35)
+		(end 11.35 -16.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6cd43325-e443-4eec-b38b-3f7f4f85b0f3")
+	)
+	(fp_line
+		(start -4.15 1.85)
+		(end -4.15 -16.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "aeb23050-6484-4a31-80ee-53a2d74f7ccb")
+	)
+	(fp_line
+		(start 11.35 -16.35)
+		(end 11.35 1.85)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "17b78334-b831-4969-8c95-4b6345cff5d4")
+	)
+	(fp_line
+		(start 11.35 1.85)
+		(end -4.15 1.85)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c7f88b1c-a07e-49d3-bd5d-23ab1a553929")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.6 -7.162 0)
+		(layer "F.Fab")
+		(uuid "5b8629de-2990-4ce8-bc60-2e354132b81f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 4.05 4.05)
+		(drill 2.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d01fbaf7-d880-4050-87c6-c785c995d07b")
+	)
+	(pad "2" thru_hole circle
+		(at 7.2 0)
+		(size 4.05 4.05)
+		(drill 2.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f0dd9bb4-5839-4b3a-9b03-bc93a5f5198e")
+	)
+	(pad "3" thru_hole oval
+		(at -3.15 -6)
+		(size 1 2)
+		(drill oval 0.6 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f1d4794f-f4d1-4b60-b7b6-d086ca4a1ae5")
+	)
+	(pad "4" thru_hole oval
+		(at 10.35 -6)
+		(size 1 2)
+		(drill oval 0.6 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "04de25f1-7c84-4ea2-86b0-993b9fb86d1f")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Sense&ControlBoard_Libraries/packages3D/XT60PW-M.stp"
+		(offset
+			(xyz 3.599999851 2.380000079 0.4600000014)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -180 0 0)
+		)
+	)
+)

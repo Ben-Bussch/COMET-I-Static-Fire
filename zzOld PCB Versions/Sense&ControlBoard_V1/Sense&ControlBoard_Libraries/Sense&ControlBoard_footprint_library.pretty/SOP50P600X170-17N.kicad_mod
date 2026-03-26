@@ -1,0 +1,412 @@
+(footprint "SOP50P600X170-17N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "PowerSSO-16")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3207f589-f32e-40c2-898b-25d6f9a40bb4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "VN7050AJTR"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b92a4428-b4af-422b-83ca-3aa229a713cb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.st.com/resource/en/datasheet/vn7050aj.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3632b34-a882-4135-bb76-1d9f8e3e299c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "High-side MOSFET driver w/ Load Sensing"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9d607df0-1b4e-48f8-9a0b-a04478b4cf63")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "1.7"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "606d4555-54cb-4405-8df2-4fe577f5cd08")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "STMicroelectronics"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aa29fed3-279b-45e4-9851-de9c90106197")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "VN7050AJTR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7348ed14-eda7-4a61-9c48-fe5d3a4b0bd5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "511-VN7050AJTR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c82066b3-a7dd-4116-adda-0085b8337ce7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/VN7050AJTR?qs=cowwQvzBv2eo%252BkH09rv37w%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "72ff1f48-287a-4f47-83f9-2024ee4b6f13")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" "VN7050AJTR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "688f8f40-0991-48a1-aca5-3620dfe69939")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" "https://www.arrow.com/en/products/vn7050ajtr/stmicroelectronics?region=europe"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d34eb0ec-d726-40e1-bf8d-923eec89480a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "VN7050AJTR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "33c811d7-3330-4b17-926b-813135def91e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Link" "https://uk.farnell.com/stmicroelectronics/vn7050ajtr/power-load-sw-high-side-40-to/dp/3132673"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1951eb7f-78f3-4577-aa1a-e8d897bce3f7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" "Farnell"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2c52cec4-f970-49e6-9c89-0d5bfc0004ca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.45 -2.25)
+		(end -1.95 -2.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4d35d635-3107-4d2c-a242-23cd04bbd641")
+	)
+	(fp_line
+		(start -3.7 -2.7)
+		(end 3.7 -2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "abcd0d3e-ed83-465b-b7a3-2c36aa731622")
+	)
+	(fp_line
+		(start -3.7 2.7)
+		(end -3.7 -2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5ff7c11d-37a2-4a9d-a29a-380a5181308b")
+	)
+	(fp_line
+		(start 3.7 -2.7)
+		(end 3.7 2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a64950fc-bced-4d88-8500-833bcbedeb94")
+	)
+	(fp_line
+		(start 3.7 2.7)
+		(end -3.7 2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d4e75b79-c2dc-41a2-81de-a37611055856")
+	)
+	(fp_line
+		(start -1.95 -2.45)
+		(end 1.95 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "eff82600-6f38-4426-a233-fa8932de6b8e")
+	)
+	(fp_line
+		(start -1.95 -1.95)
+		(end -1.45 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3b926865-7031-4838-b93e-eabb395e3caf")
+	)
+	(fp_line
+		(start -1.95 2.45)
+		(end -1.95 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4d06e78e-0c6c-4585-99fa-d12fa2ff4a5d")
+	)
+	(fp_line
+		(start 1.95 -2.45)
+		(end 1.95 2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4405515d-7500-4bdd-90b0-7992eb59a8ee")
+	)
+	(fp_line
+		(start 1.95 2.45)
+		(end -1.95 2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "72805fff-c0da-4579-be85-85f1ed4e5502")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "2c7528bd-93ea-4ee3-9dce-7b6b48514218")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.7 -1.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ebf48cd2-ab32-4fd2-9958-5fe933510d8a")
+	)
+	(pad "2" smd rect
+		(at -2.7 -1.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "afeeadd4-8e1d-4a64-af1e-f0a6fc94a761")
+	)
+	(pad "3" smd rect
+		(at -2.7 -0.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "85432690-fa8d-4a75-93d9-73dc0a5230cd")
+	)
+	(pad "4" smd rect
+		(at -2.7 -0.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2a16c41b-385c-466c-97dd-d8df64e166cf")
+	)
+	(pad "5" smd rect
+		(at -2.7 0.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "27650dbb-b593-425b-a8a9-98113bc66d65")
+	)
+	(pad "6" smd rect
+		(at -2.7 0.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cf2bb481-e06d-4530-86ec-b4530c8e27d0")
+	)
+	(pad "7" smd rect
+		(at -2.7 1.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4ef2735b-c1f2-4bb0-bf6a-28d02b6a6958")
+	)
+	(pad "8" smd rect
+		(at -2.7 1.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "95c656ce-9f88-4842-a3b4-026c1ccb9d1e")
+	)
+	(pad "9" smd rect
+		(at 2.7 1.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b5eb5621-603f-4691-80e1-8f908b0d12c9")
+	)
+	(pad "10" smd rect
+		(at 2.7 1.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8893cc5d-00a2-4d92-abc6-f5d5e13f2e3d")
+	)
+	(pad "11" smd rect
+		(at 2.7 0.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c05cc11a-732d-4da8-a4f7-aa8358ea0db8")
+	)
+	(pad "12" smd rect
+		(at 2.7 0.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "00b84a86-579e-4efb-bd4d-c4fd34957c52")
+	)
+	(pad "13" smd rect
+		(at 2.7 -0.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e83f9fba-e210-48e4-915a-59f06326d58d")
+	)
+	(pad "14" smd rect
+		(at 2.7 -0.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "38ee81ce-0759-40c0-a395-f81d09a1e274")
+	)
+	(pad "15" smd rect
+		(at 2.7 -1.25 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "15328393-f531-4183-933d-431b70e3147e")
+	)
+	(pad "16" smd rect
+		(at 2.7 -1.75 90)
+		(size 0.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7817d2f4-fd73-4258-8fda-ab9f5c2f062b")
+	)
+	(pad "17" smd rect
+		(at 0 0)
+		(size 2.8 3.91)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "de1ef7d0-517e-4cc8-8987-f129b55e528b")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Sense&ControlBoard_Libraries/packages3D/VN7050AJTR.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

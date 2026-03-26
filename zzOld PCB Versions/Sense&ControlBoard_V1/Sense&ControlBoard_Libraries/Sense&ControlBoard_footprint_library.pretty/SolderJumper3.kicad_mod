@@ -1,0 +1,143 @@
+(footprint "SolderJumper3"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), Alternate KiCad Library")
+	(tags "resistor handsolder")
+	(property "Reference" "REF**"
+		(at 0 -1.27 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "956234fd-c015-46a0-8d6e-f834172c066c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SolderJumper_3_Bridged12"
+		(at -0.45 4.6 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1e927aeb-87bc-486c-95fa-e74e0fa16965")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f691d36d-468a-4f34-ac2e-f256dee3f19d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "70939395-4909-48de-a08b-91709c3d4026")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d959e331-8088-4cd7-b631-932e3fac46cf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd exclude_from_bom)
+	(fp_line
+		(start -0.5715 -1.8)
+		(end -0.5715 1.804)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "14f9d72e-83e1-4506-99c6-497ca5b4143d")
+	)
+	(fp_line
+		(start -0.5715 1.804)
+		(end 0.5715 1.804)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "47ec2047-e2ab-41d6-949c-25b1667f9fb2")
+	)
+	(fp_line
+		(start 0.5715 -1.804)
+		(end -0.5715 -1.804)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ac2ff125-6be3-4999-8140-fa9ea9fb883a")
+	)
+	(fp_line
+		(start 0.5715 1.804)
+		(end 0.5715 -1.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5bb7bdbb-d7da-4f21-9a3b-11b834817448")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -1.85 0.5975 90)
+		(layer "F.Fab")
+		(uuid "8274a0da-9ed7-4d6a-a3fe-c3313097ea57")
+		(effects
+			(font
+				(size 0.26 0.26)
+				(thickness 0.04)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 0 1.195 90)
+		(size 0.715 0.64)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "973be769-f69a-4198-a27a-8c4214ec8d37")
+	)
+	(pad "2" smd roundrect
+		(at 0 0 90)
+		(size 0.715 0.64)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "1c5f7cb1-3b1e-454e-a0b3-d119da9f1ccb")
+	)
+	(pad "3" smd roundrect
+		(at 0 -1.195 90)
+		(size 0.715 0.64)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "60cea69c-9974-4ff0-b7ec-1fd527e52ecb")
+	)
+	(embedded_fonts no)
+)

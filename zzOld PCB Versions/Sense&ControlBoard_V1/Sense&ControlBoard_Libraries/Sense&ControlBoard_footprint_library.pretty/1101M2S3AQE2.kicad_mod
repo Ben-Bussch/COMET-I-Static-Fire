@@ -1,0 +1,433 @@
+(footprint "1101M2S3AQE2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "1101M2S3AQE2-2")
+	(tags "Switch")
+	(property "Reference" "REF**"
+		(at -4.7 6.931 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8f92517c-5b77-4ae8-a345-c15e7863b15d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "1101M2S3AQE2"
+		(at -4.7 6.931 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "5053986f-5b82-450c-9d33-b46d142bdcc6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ckswitches.com/media/1429/1000.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fcf2051f-d431-43d5-9db6-d67a8ba5d4b9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "PCB Slide Switch Single Pole Double Throw (SPDT) Latching 6 A @ 120 V ac, 6 A @ 28 V dc Slide"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4844924a-82e7-4b0b-bf41-d9c51f6017d5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "6.6"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c332cd17-59f2-4450-8df0-e850c8d2fc2a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Farnell Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "859e7571-1956-48cd-a14e-c10f1772bf24")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Farnell Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4177c236-ad78-4837-889b-c98edbb0610b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "C & K COMPONENTS"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "022d2354-c318-4c00-96e1-66845df1a178")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "1101M2S3AQE2"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "371ce92d-7483-40ec-96b0-b8e5a48d1d7f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier" "Farnell"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6205ee11-aa5d-4ba4-ad34-11c09eecd502")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Link" "https://uk.farnell.com/c-k-components/1101m2s3aqe2/slide-switch-spdt-r-a-on-on/dp/1437701"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c623bd0c-4b00-4d35-8db3-e16e1671e18c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -11.05 2.03)
+		(end 1.65 2.03)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f0de98e3-8abd-478a-83c1-9a815b984fd7")
+	)
+	(fp_line
+		(start -11.05 7.8)
+		(end -11.05 2.03)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7f4ba813-2595-4abe-8dbc-8ccc671b0719")
+	)
+	(fp_line
+		(start -9.7 10.53)
+		(end 0.3 10.53)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "74f4c810-43ff-422c-90a6-de711133916d")
+	)
+	(fp_line
+		(start -6.63 10.53)
+		(end -6.63 13)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "62043cdb-6498-4fab-868f-8a81ac8e1fa4")
+	)
+	(fp_line
+		(start -6.63 13)
+		(end -2.77 13)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c035c45d-e596-460f-8416-0aec49176343")
+	)
+	(fp_line
+		(start -2.77 13)
+		(end -2.77 10.53)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a29ba712-6e8a-4096-a17f-c707f2afb5a6")
+	)
+	(fp_line
+		(start 0 -1.9)
+		(end 0 -1.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c326e98c-1936-43d6-b17b-e47952b1bfe2")
+	)
+	(fp_line
+		(start 0 -1.8)
+		(end 0 -1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "95604694-e04b-4e38-aea0-98cb48c6411a")
+	)
+	(fp_line
+		(start 1.65 2.03)
+		(end 1.65 7.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "940b28a2-309a-4594-8df8-b85bb38f427f")
+	)
+	(fp_arc
+		(start 0 -1.9)
+		(mid 0.05 -1.85)
+		(end 0 -1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3c2d7831-e3ea-48b7-981a-ded75de5f75f")
+	)
+	(fp_arc
+		(start 0 -1.8)
+		(mid -0.05 -1.85)
+		(end 0 -1.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "083821ce-ed2a-4107-a1d2-827dbebf4800")
+	)
+	(fp_line
+		(start -13.692 -2.388)
+		(end 4.293 -2.388)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6e66d54f-bf39-4782-8fc8-dc853e458749")
+	)
+	(fp_line
+		(start -13.692 16.25)
+		(end -13.692 -2.388)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5c23d962-0eaa-44a6-afdc-90219c6fffa9")
+	)
+	(fp_line
+		(start 4.293 -2.388)
+		(end 4.293 16.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "46d6d97a-6f95-40e2-93e9-dd0aa7af4adf")
+	)
+	(fp_line
+		(start 4.293 16.25)
+		(end -13.692 16.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "466c8a77-127c-4c68-8e58-18cb01d566ca")
+	)
+	(fp_line
+		(start -11.05 2.03)
+		(end 1.65 2.03)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f839f724-f64a-4eb0-af5d-4aff5de9d2a2")
+	)
+	(fp_line
+		(start -11.05 10.53)
+		(end -11.05 2.03)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "79ad46dc-273c-4b59-8ce6-6d7be55e98e7")
+	)
+	(fp_line
+		(start -6.63 10.53)
+		(end -6.63 13)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7c2f41fa-684f-4c2d-9b05-e0f0c78a5ca4")
+	)
+	(fp_line
+		(start -6.63 13)
+		(end -2.77 13)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "82bfd21c-e08b-475c-8330-16d57bdd4f1c")
+	)
+	(fp_line
+		(start -2.77 13)
+		(end -2.77 10.53)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0948069b-620f-43a1-a1fa-e970f4ca369d")
+	)
+	(fp_line
+		(start 1.65 2.03)
+		(end 1.65 10.53)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "797c2b37-f736-43ac-aedf-98b5202089ac")
+	)
+	(fp_line
+		(start 1.65 10.53)
+		(end -11.05 10.53)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "80e8fe4e-124c-4778-8def-b69fc82c6c43")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -4.7 6.931 0)
+		(layer "F.Fab")
+		(uuid "4093ec5c-64fe-4da1-a95c-e9a62685b7de")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 2.775 2.775)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d03b1001-ea88-4d79-b9c6-e82ecab572a7")
+	)
+	(pad "2" thru_hole circle
+		(at -4.7 0)
+		(size 2.775 2.775)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "bf76c020-88fe-43c1-ac7a-33038755f409")
+	)
+	(pad "3" thru_hole circle
+		(at -9.4 0)
+		(size 2.775 2.775)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9735be9e-551d-4045-b1aa-e838f4b7cd0c")
+	)
+	(pad "MH1" thru_hole circle
+		(at 1.905 9.53)
+		(size 2.775 2.775)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "41835160-cfbf-4132-86a3-7349c50b30fb")
+	)
+	(pad "MH2" thru_hole circle
+		(at -11.305 9.53)
+		(size 2.775 2.775)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "af013346-130b-4e2f-8c07-05fb62be3503")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Sense&ControlBoard_Libraries/packages3D/1101M2S3AQE2.stp"
+		(offset
+			(xyz -21.10000006 -7.979999899 -1.009999975)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
