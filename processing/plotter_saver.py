@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 26 01:26:47 2026
-
-@author: Bobke
-"""
-
 import serial
 import time
 from datetime import datetime
@@ -17,117 +10,124 @@ p_o_vals = deque(maxlen=1000)
 p_i_vals = deque(maxlen=1000)
 timestamps = deque(maxlen=1000)
 
+PLOT_INTERVAL = 0.1  # seconds 
 
 plt.ion()
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 6), sharex=True)
+
 # --- Raw data plot ---
 line1, = ax1.plot([], [], label='P_N2O', color='blue')
 line2, = ax1.plot([], [], label='P_IPA', color='red')
 ax1.set_ylabel("Pressure [bar]")
-ax1.set_xlim(0, 50)
+ax1.set_xlim(0, 150)
 ax1.legend()
 ax1.grid(True)
 
 # --- Moving average plot ---
-ma_window = 10  # number of points for moving average
+ma_window = 20
 line1_ma, = ax2.plot([], [], label='P_N2O MA', color='blue')
 line2_ma, = ax2.plot([], [], label='P_IPA MA', color='red')
 ax2.set_xlabel("Time [s]")
 ax2.set_ylabel("Pressure MA [bar]")
-ax2.set_xlim(0, 50)
+ax2.set_xlim(0, 150)
 ax2.legend()
 ax2.grid(True)
 
 plt.show(block=False)
 
-t_fill_exp = 900 #s
+t_fill_exp = 900  # s
+
 
 def generate_output_filename():
     now = datetime.now()
-    # Create a datetime string suitable for a filename, e.g., "output_20230405_123456.csv"
-    filename = now.strftime("output_%Y%m%d_%H%M%S.csv")
-    return filename
+    return now.strftime("output_%Y%m%d_%H%M%S.csv")
+
 
 def readserial(comport, baudrate, timestamp=False):
 
-    ser = serial.Serial(comport, baudrate, timeout=None)         # 1/timeout is the frequency at which the port is read
-    time.sleep(2)  # give the arduino time to start.
+    ser = serial.Serial(comport, baudrate, timeout=None)
+    time.sleep(2)
     ser.flushInput()
-    
-    
-    output_csv = generate_output_filename()  # Generate filename with current datetime
+
+    last_plot_time = time.time()
+
+    output_csv = generate_output_filename()
     with open(output_csv, 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
-        # Write header once
-        # Write header
-        csv_writer.writerow(['Timestamp', 't [ms]', 'Mode', 'Launch_Time [s]', 'Fill_Time [s]', 'P_o [Bar]', 'P_i [Bar]'])
-        
+
+        csv_writer.writerow([
+            'Timestamp', 't [ms]', 'Mode',
+            'Launch_Time [s]', 'Fill_Time [s]',
+            'P_o [Bar]', 'P_i [Bar]'
+        ])
+
         mode = None
         launch_time = None
         fill_time = None
-        t_max = 0
+
         try:
             while True:
-                data = ser.readline().decode().strip()
-            
+                data = ser.readline().decode(errors='ignore').strip()
+
                 if not data:
                     continue
-            
-                # --- Handle metadata lines ---
+
+                # --- Metadata ---
                 if data.startswith("Mode:"):
                     try:
                         mode = data.split(":")[1].strip()
                     except ValueError:
                         mode = None
-                    
+
                     if launch_time == "STANDBY" or not launch_time:
                         print("Mode:", mode)
                     elif mode == "ABORT":
-                        print("Mode: ", mode)
-                
+                        print("Mode:", mode)
+
                 elif data.startswith("ABORT IN:"):
                     try:
                         launch_time = int(data.split(":")[1].strip().split()[0])
                     except ValueError:
                         launch_time = None
-                    
+
                     fill_time = "STANDBY"
                     print("ABORT IN:", launch_time)
-            
+
                 elif data.startswith("Launch Time:"):
                     try:
                         launch_time = int(data.split(":")[1].strip().split()[0])
                     except ValueError:
                         launch_time = None
-                    
+
                     fill_time = "STANDBY"
                     print("Launch time:", launch_time)
-            
+
                 elif data.startswith("Fill Time:"):
                     try:
                         fill_time = int(data.split(":")[1].strip().split()[0])
                     except ValueError:
                         fill_time = None
+
                     launch_time = "STANDBY"
-                    print("Fill time:",fill_time, " / ", t_fill_exp, " s")
-            
-                # --- Handle main data line ---
-                elif "P_o" in data:
+                    print("Fill time:", fill_time, "/", t_fill_exp, "s")
+
+                # --- Main data ---
+                elif "_o" in data:
                     now = datetime.now()
                     timestamp = now.strftime('%H:%M:%S') + '.{:04d}'.format(int(now.microsecond / 1000))
-                    
+
                     try:
                         values = {}
                         for item in data.split(','):
-                            for item in data.split(','):
-                                if ':' in item:
-                                    key, val = item.split(':', 1)
-                                    values[key.strip()] = val.strip()
-                        
-                        
+                            if ':' in item:
+                                key, val = item.split(':', 1)
+                                values[key.strip()] = val.strip()
+
                         p_o = float(values.get('P_o', 0))
                         p_i = float(values.get('P_i', 0))
                         t = float(values.get('t', 0))
+
+                        # --- CSV ---
                         csv_writer.writerow([
                             timestamp,
                             t,
@@ -137,59 +137,61 @@ def readserial(comport, baudrate, timestamp=False):
                             p_o,
                             p_i
                         ])
-                                    
-                        csvfile.flush()  # safer logging
-                        
-                        p_o_vals.append(p_o)
-                        p_i_vals.append(p_i)
-                        timestamps.append(t/1000)
-                        
-                        # --- Raw data ---
-                        line1.set_data(list(timestamps), list(p_o_vals))
-                        line2.set_data(list(timestamps), list(p_i_vals))
+                        csvfile.flush()
 
-                        # --- Moving average ---
-                        if len(p_o_vals) >= ma_window:
-                            weights = np.arange(1, ma_window + 1)
-                            p_o_ma = np.convolve(p_o_vals, np.ones(ma_window)/ma_window, mode='valid')
-                            p_i_ma = np.convolve(p_i_vals, np.ones(ma_window)/ma_window, mode='valid')
-                            t_ma = list(timestamps)[ma_window-1:]  # align timestamps with MA
-                            line1_ma.set_data(t_ma, p_o_ma)
-                            line2_ma.set_data(t_ma, p_i_ma)
+                        # --- DATA APPEND (slightly relaxed condition) ---
+                        if (not timestamps) or (t/1000 - timestamps[-1] >= 0.1):
 
-                        # --- Update x-axis window (scrolling 50s) ---
-                        window_size = 50
-                        if len(timestamps) > 1:
-                            current_time = timestamps[-1]
-                            window_start = (current_time // window_size) * window_size 
-                            window_end = window_start + window_size 
-                            ax1.set_xlim(window_start, window_end)
-                            ax2.set_xlim(window_start, window_end)
+                            timestamps.append(t/1000)
+                            p_o_vals.append(p_o)
+                            p_i_vals.append(p_i)
 
-                        # --- Autoscale y-axis ---
-                        ax1.relim()
-                        ax1.autoscale_view(scalex=False, scaley=True)
-                        ax2.relim()
-                        ax2.autoscale_view(scalex=False, scaley=True)
+                            # --- THROTTLED PLOTTING ---
+                            if time.time() - last_plot_time > PLOT_INTERVAL:
+                                last_plot_time = time.time()
 
-                        plt.draw()
-                        plt.pause(0.01)
+                                t_list = list(timestamps)
+                                p_o_list = list(p_o_vals)
+                                p_i_list = list(p_i_vals)
+
+                                # Raw
+                                line1.set_data(t_list, p_o_list)
+                                line2.set_data(t_list, p_i_list)
+
+                                # Moving average
+                                if len(p_o_vals) >= ma_window:
+                                    kernel = np.ones(ma_window) / ma_window
+                                    p_o_ma = np.convolve(p_o_list, kernel, mode='valid')
+                                    p_i_ma = np.convolve(p_i_list, kernel, mode='valid')
+                                    t_ma = t_list[ma_window-1:]
+
+                                    line1_ma.set_data(t_ma, p_o_ma)
+                                    line2_ma.set_data(t_ma, p_i_ma)
+
+                                if len(timestamps) > 1:
+                                    window_size = 150  # seconds
+                                    current_time = timestamps[-1]
+
+                                    ax1.set_xlim(current_time - window_size, current_time)
+                                    ax2.set_xlim(current_time - window_size, current_time)
+
+                                # Autoscale
+                                ax1.relim()
+                                ax1.autoscale_view(scalex=False, scaley=True)
+                                ax2.relim()
+                                ax2.autoscale_view(scalex=False, scaley=True)
+
+                                fig.canvas.draw_idle()
+                                fig.canvas.flush_events()
+                                plt.pause(0.001)
 
                     except Exception as e:
                         print("Error:", e)
-                        plt.pause(0.01)
-                    """
-                    if len(timestamps) % 50 == 0:
-                        ax.relim()
-                        ax.autoscale_view()
-                    plt.draw()
-                    plt.pause(0.01)
-                    """
+
         except KeyboardInterrupt:
             ser.close()
-            print("Serial reading stopped by user. (Ctrl-c in terminal)")
-            
+            print("Serial reading stopped by user.")
+
 
 if __name__ == '__main__':
-
     readserial('/dev/ttyACM0', 9600, timestamp=True)
