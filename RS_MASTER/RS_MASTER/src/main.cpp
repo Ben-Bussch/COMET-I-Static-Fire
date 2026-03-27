@@ -7,7 +7,7 @@
 
 const int RS_DE_RE_SLAVE = 10;
 unsigned long lastSensorReadTime = 0;
-const int SENSOR_READ_INTERVAL_MS = 1000; //200 for 5Hz pressure readings
+const int SENSOR_READ_INTERVAL_MS = 100; //200 for 5Hz pressure readings
 
 unsigned long lastdisplay  = 0;
 int DISPLAY_INTERVAL_MS  = 1000; 
