@@ -194,4 +194,10 @@ def readserial(comport, baudrate, timestamp=False):
 
 
 if __name__ == '__main__':
-    readserial('/dev/ttyACM0', 9600, timestamp=True)
+    while(True):
+        try:
+            readserial('/dev/ttyACM0', 9600, timestamp=True)
+        except Exception as e:
+            print("Error: ", e)
+            time.sleep(3)
+        
