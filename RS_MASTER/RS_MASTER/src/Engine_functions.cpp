@@ -24,7 +24,7 @@ int FilldeltaPPM = 750;
 int PPMpos = 0; 
 int count = 0;
 
-unsigned long pyro_start_time = 8800; //4000 for early pyro, 8800 for later pyro
+unsigned long pyro_start_time = 7800; //4000 for early pyro, 8800 for later pyro
 
 void SetupControl(int PyroPin, int FirePin, int FillSequPin){
   //Servos
@@ -42,7 +42,6 @@ void SetupControl(int PyroPin, int FirePin, int FillSequPin){
   pinMode(FillSequPin,  INPUT);
 
 }
-
 void Rest(){
    NoxEngServo.writeMicroseconds(NoxEngStartPPM);
    IPAEngServo.writeMicroseconds(IPAEngStartPPM); 
@@ -64,7 +63,7 @@ unsigned long fireSequence(unsigned long FireStartTime, unsigned long clk_time, 
 {
   unsigned long countdown =  clk_time - FireStartTime; //starts from zero to avoid negative long issues
 
-  if(countdown >= 10100 ){
+  if(countdown >= 10200 ){
     IPAEngServo.writeMicroseconds(IPAEngStartPPM+IPAdeltaPPM);
   }
 
